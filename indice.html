@@ -1,42 +1,36 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
 	<meta charset="UTF-8">
 	<title>Menù Lateral con Css</title>
+	<link rel="icon" type="image/png" href="libs/img/einco.png">
+	<link rel="stylesheet" href="libs/bootstrap/css/bootstrap.min.css">
+	<script src="libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="estilos.css">
 </head>
+
 <body>
-	<header class="header">
-		<div class="container">
-		<div class="btn-menu">
-			<label for="btn-menu">☰</label>
-		</div>
-			<div class="logo">
-				<h1>Logotipo</h1>
+	<div class="d-flex">
+			<div id="sidebar-container" class="bg-primary">
+				<div class="logo">
+					<h4>SASEI-UAGro</h4>
+				</div>
+				
+				<div class="menu">
+					<a href="#"><i class="icon ion-md-home"></i>Inicio</a>
+					<a href="#"><i class="icon ion-md-people"></i>Control de Usuarios</a>
+					<a href="#"><i class="icon ion-md-albums"></i>Directorio Particular</a>
+					<a href="#"><i class="icon ion-md-list"></i></i>Directorio Popular</a>
+					<a href="#"><i class="icon ion-md-paper"></i>Inspección General</a>
+					<a href="#"><i class="icon ion-md-today"></i>Plantilla Directivo Docente</a>
+					<a href="#"><i class="icon ion-md-clipboard"></i>Secuencia Didáctica</a>
+					<a href="#"><i class="icon ion-md-videocam"></i>&nbsp Sala de Reuniones</a>
+				</div>
+				
 			</div>
-			<nav class="menu">
-				<a href="#">Inicio</a>
-				<a href="#">Nosotros</a>
-				<a href="#">Blog</a>
-				<a href="#">Contacto</a>
-			</nav>
-		</div>
-	</header>
-	<div class="capa"></div>
-<!--	--------------->
-<input type="checkbox" id="btn-menu">
-<div class="container-menu">
-	<div class="cont-menu">
-		<nav>
-			<a href="#">Portafolio</a>
-			<a href="#">Servicios</a>
-			<a href="#">Suscribirse</a>
-			<a href="#">Facebook</a>
-			<a href="#">Youtube</a>
-			<a href="#">Instagram</a>
-		</nav>
-		<label for="btn-menu">✖️</label>
 	</div>
-</div>
 </body>
+
 </html>
