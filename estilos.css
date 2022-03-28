@@ -1,5 +1,5 @@
 :root {
-	--primary: #0012dd;
+	--primary: #0d6efd;
 	--light: #ffffff;
 	--grey: #efefef;
 
@@ -29,4 +29,7 @@ a {
 #sidebar-container .menu {
 	width: 18rem;
 
+}
+.avatar{
+	max-width: 45px;
 }
