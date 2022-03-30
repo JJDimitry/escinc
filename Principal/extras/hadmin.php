@@ -7,17 +7,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
-  <link rel="icon" type="image/png" href="libs/img/einco.png">
-  <link rel="stylesheet" href="/libs/bootstrap/css/bootstrap.min.css">
-  <script src="libs/bootstrap/js/bootstrap.min.js"></script>
+  <link rel="icon" type="image/png" href="../libs/img/einco.png">
+  <link rel="stylesheet" href="../libs/bootstrap/css/bootstrap.min.css">
+	<script src="../libs/bootstrap/js/bootstrap.min.js"></script>
   <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="extras/estilos.css">
+  <link rel="stylesheet" href="../Principal/extras/estilos.css">
 
 
   <div class="d-flex">
     <div id="sidebar-container" class="bg-primary">
       <div class="logo">
-        <img src="libs/img/eincr.png" alt="logo" width="150px">
+        <img src="../libs/img/eincr.png" alt="logo" width="150px">
         <h4 class="text-light font-weight-bold">SASEI-UAGro</h4>
       </div>
 
@@ -29,7 +29,7 @@
           Directorio Particular</a>
         <a href="dpopular.php" class="d-block text-light p-3"><i class="icon ion-md-list lead"></i></i>&nbsp;
           Directorio Popular</a>
-        <a href="igenereal.php" class="d-block text-light p-3"><i class="icon ion-md-paper lead"></i>&nbsp; Inspección
+        <a href="igeneral.php" class="d-block text-light p-3"><i class="icon ion-md-paper lead"></i>&nbsp; Inspección
           General</a>
         <a href="ppddocente.php" class="d-block text-light p-3"><i class="icon ion-md-today lead"></i>&nbsp; Plantilla
           Directivo Docente</a>
@@ -51,13 +51,13 @@
           <ul class="navbar-nav ms-auto">
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                <img src="libs/img/eincc.png" class=" img-fluid rounded-circle avatar ms-2">
+                <img src="../libs/img/eincc.png" class=" img-fluid rounded-circle avatar ms-2">
                 Usuario
 
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                 <li><a class="dropdown-item" href="#">Configuracion</a></li>
-                <li><a class="dropdown-item" href="index.html">Cerrar Sesion</a></li>
+                <li><a class="dropdown-item" href="../">Cerrar Sesion</a></li>
               </ul>
             </li>
           </ul>
