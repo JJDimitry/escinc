@@ -2,7 +2,8 @@
 <html lang="es">
 	<link rel="icon" type="image/png" href="libs/img/einco.png">
 	<link rel="stylesheet" href="libs/css/bootstrap/bootstrap.min.css">
-	<script src="libs/js/bootstrap/bootstrap.min.js"></script>
+	<script src="libs/js/functions.js"></script>
+	<script src="libs/js/jquery.js"></script>
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,8 +14,8 @@
 	<a>Usuario/Correo:</a>
 	<input id="user" type="text">
 	<a>Contraseña:</a>
-	<input id="password" type="password">
-	<a class="btn btn-primary" href="Principal/inicio.php" role="button">Iniciar Sesión</a>
+	<input id="passwd" type="password">
+	<button type="button" class="btn btn-primary" onclick="login()">Iniciar Sesión</button>
 	<a href="https://youtube.com" >Olvide la contraseña</a>
 	
 </body>

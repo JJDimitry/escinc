@@ -1,4 +1,4 @@
-<?php require('extras/hadmin.php')?>
+<?php require('admin/hadmin.php')?>
 <title>Inicio</title>
 </head>
 <body>

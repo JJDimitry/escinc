@@ -1,4 +1,4 @@
-<?php require('extras/hadmin.php')?>
+<?php require('admin/hadmin.php')?>
 <title>Control de Usuarios</title>
 </head>
 <body>

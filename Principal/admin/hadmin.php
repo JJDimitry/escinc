@@ -8,10 +8,10 @@
 
 
   <link rel="icon" type="image/png" href="../libs/img/einco.png">
-  <link rel="stylesheet" href="../libs/bootstrap/css/bootstrap.min.css">
-	<script src="../libs/bootstrap/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="../libs/css/bootstrap/bootstrap.min.css">
+	<script src="../libs/js/bootstrap/bootstrap.min.js"></script>
   <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="../Principal/extras/estilos.css">
+  <link rel="stylesheet" href="../libs/css/estilos.css">
 
 
   <div class="d-flex">
