@@ -5,7 +5,8 @@ function login(){
     if(user != "" && passwd != ""){
         $.ajax({        
             data: {user:user, passwd:passwd},
-            url: "libs/db/login.php",        
+            url: "libs/db/login.php",     
+               
             dataType: "JSON",        
             type: "POST"
             }).done(function(resp){
