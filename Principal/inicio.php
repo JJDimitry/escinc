@@ -1,5 +1,5 @@
 <?php require('admin/hadmin.php')?>
-<title>Inicio  HOLA</title>
+<title>Inicio</title>
 </head>
 <body>
 </body>

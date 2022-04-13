@@ -22,11 +22,11 @@
       </div>
 
       <div class="menu">
-        <a href="inicio.php" class="d-block text-light p-3"><i class="icon ion-md-home lead"></i>&nbsp; 1. Inicio</a>
-        <a href="cusuario.php" class="d-block text-light p-3"><i class="icon ion-md-people lead"></i>&nbsp; 2. Control de
+        <a href="inicio.php" class="d-block text-light p-3"><i class="icon ion-md-home lead"></i>&nbsp; Inicio</a>
+        <a href="cusuario.php" class="d-block text-light p-3"><i class="icon ion-md-people lead"></i>&nbsp; Control de
           Usuarios</a>
         <a href="dparticular.php" class="d-block text-light p-3"><i class="icon ion-md-albums lead"></i>&nbsp;
-          3. Directorio Particular</a>
+          Directorio Particular</a>
         <a href="dpopular.php" class="d-block text-light p-3"><i class="icon ion-md-list lead"></i></i>&nbsp;
           Directorio Popular</a>
         <a href="igeneral.php" class="d-block text-light p-3"><i class="icon ion-md-paper lead"></i>&nbsp; Inspección
