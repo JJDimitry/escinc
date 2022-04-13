@@ -1,5 +1,5 @@
 <?php require('admin/hadmin.php')?>
-<title>Control de Usuarios</title>
+<title>Control de </title>
 </head>
 <body>
 </body>
