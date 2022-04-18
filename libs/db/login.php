@@ -7,7 +7,7 @@ include('conn.php');
 
 $sql = "SELECT * FROM lusuario WHERE NUsuario = '$user' AND Contrasena = '$passwd'";
 $result = $con->query($sql);      
-
+include('cerrar.php');
 if($result->num_rows >0){
     $vector= array();
     
