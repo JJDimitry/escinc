@@ -13,7 +13,6 @@
   <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
   <link rel="stylesheet" href="../libs/css/estilos.css">
 
-
   <div class="d-flex">
     <div id="sidebar-container" class="bg-primary">
       <div class="logo">

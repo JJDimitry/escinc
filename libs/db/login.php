@@ -9,9 +9,8 @@ $sql = "SELECT * FROM lusuario WHERE NUsuario = '$user' AND Contrasena = '$passw
 $result = $con->query($sql);      
 include('cerrar.php');
 if($result->num_rows >0){
-    $vector= array();
-    
-    while($row=$result->fetch_assoc()){ 
+    $vector= array();   
+    while($row=$result->fetch_assoc()){
     $vector[]= $row;        
     }    
 }

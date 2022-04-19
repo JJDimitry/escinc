@@ -1,6 +1,8 @@
 function login(){
     var user= $('#user').val();
+    var user= user.toUpperCase();
     var passwd= $('#passwd').val();
+
     if(user != "" && passwd != ""){
         $.ajax({        
             data: {user:user, passwd:passwd},
@@ -8,10 +10,7 @@ function login(){
             dataType: "JSON",        
             type: "POST"
             }).done(function(resp){
-                if(resp != "NHR"){
-                    //alert("Bienvenida, " + resp[0]['Contrasena'] + ", CON USUARIO: " + resp[0]['NUsuario']);
-                    
-                
+                if(resp != "NHR"){                                   
                     $('#NUsuario').val(resp[0]['NUsuario']);
                     $('#Contrasena').val(resp[0]['Contrasena']);
                     $('#img').val(resp[0]['img']);

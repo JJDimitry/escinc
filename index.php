@@ -22,6 +22,7 @@
 	<input id="img" type="hidden" value="">
 	<input id="Telefono" type="hidden" value="">
 	<input id="Email" type="hidden" value="">
+	<?php require('libs/php/variables.php')?>
 </body>
 
 </html>
