@@ -2,7 +2,6 @@ function login(){
     var user= $('#user').val();
     var user= user.toUpperCase();
     var passwd= $('#passwd').val();
-
     if(user != "" && passwd != ""){
         $.ajax({        
             data: {user:user, passwd:passwd},

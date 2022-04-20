@@ -1,7 +1,2 @@
-<?php     
-global $NUsuario;
-global $Contrasena;
-global $img;
-global $Telefono;
-global $Email;
-?>
+
+<a href="https://youtube.com" >Its Me!</a>

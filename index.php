@@ -16,13 +16,13 @@
 	<a>Contraseña:</a>
 	<input id="passwd" type="password">
 	<button type="button" class="btn btn-primary" onclick="login()">Iniciar Sesión</button>
-	<a href="https://youtube.com" >Olvide la contraseña</a>
-	<input id="NUsuario" type="hidden" value="">
-	<input id="Contrasena" type="hidden" value="">
-	<input id="img" type="hidden" value="">
-	<input id="Telefono" type="hidden" value="">
-	<input id="Email" type="hidden" value="">
-	<?php require('libs/php/variables.php')?>
+	<a href="https://youtube.com" >Olvide la contraseña</a>	
+	<input id="NUsuario" type="hidden">
+	<input id="Contrasena" type="hidden">
+	<input id="img" type="hidden">
+
+<button type="button" onclick="location.href='https://www.facebook.com'" class="btn btn-link">Olvide la contraseña 2</button>
+<?php require('libs/php/variables.php')?>
 </body>
 
 </html>

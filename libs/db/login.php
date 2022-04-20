@@ -12,7 +12,7 @@ if($result->num_rows >0){
     $vector= array();   
     while($row=$result->fetch_assoc()){
     $vector[]= $row;        
-    }    
+    }  
 }
 else{
     $vector= "NHR";
