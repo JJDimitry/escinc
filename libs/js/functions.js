@@ -9,14 +9,9 @@ function login(){
             dataType: "JSON",        
             type: "POST"
             }).done(function(resp){
-                if(resp != "NHR"){                                   
-                    $('#NUsuario').val(resp[0]['NUsuario']);
-                    $('#Contrasena').val(resp[0]['Contrasena']);
-                    $('#img').val(resp[0]['img']);
-                    alert($('#NUsuario').val());
-                    alert($('#Contrasena').val());
-                    alert($('#img').val());
-                    window.open("Principal/inicio.php", "_self");                                         
+                if(resp != "NHR"){  
+                    alert(resp);                                 
+                    location.href = 'Principal/inicio.php';                                         
                 }
                 else
                 alert("No Hay Registro");
@@ -26,7 +21,3 @@ function login(){
         alert("todo mal");
     }
 } 
-
-function olvcont(){
-
-}

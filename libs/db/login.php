@@ -1,18 +1,25 @@
 <?php      
 
-$user= $_POST['user'];
-$passwd= $_POST['passwd'];
+$NUsuario = $_POST['user'];
+$passwd = $_POST['passwd'];
+$img = "";
+$TipTipoUsuario = "";
 
 include('conn.php');
 
-$sql = "SELECT * FROM lusuario WHERE NUsuario = '$user' AND Contrasena = '$passwd'";
+$sql = "SELECT NUsuario, img, TipoUsuario  FROM lusuario WHERE NUsuario = '$NUsuario' AND Contrasena = '$passwd' AND Estado = 1";
 $result = $con->query($sql);      
-include('cerrar.php');
+
 if($result->num_rows >0){
     $vector= array();   
     while($row=$result->fetch_assoc()){
     $vector[]= $row;        
-    }  
+    }
+    session_start();/*
+    $_SESSION=['NUsuario'] = $vector2[0];
+    $_SESSION=['img'] = $vector2[1];
+    $_SESSION=['TipTipoUsuario'] = $vector2[2];*/
+    //$vector= $vector['NUsuario'];
 }
 else{
     $vector= "NHR";
