@@ -1,4 +1,13 @@
-.login {
-    border-color: #1995ad;
-    border-style: solid;
-}
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url("../img/edificios.png");
+    background-size: auto;
+    background-position: center;
+  }
+  .formulario{
+      background: rgb(120, 120, 120, .5);
+      padding: 20px;
+  }
+
+
