@@ -11,6 +11,7 @@
 	<script src="../libs/js/bootstrap/bootstrap.min.js"></script>
   <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
   <link rel="stylesheet" href="../libs/css/estilos.css">
+  <script src="../libs/js/functions.js"></script>
 
   <div class="d-flex">
     <div id="sidebar-container" class="bg-primary">
@@ -50,12 +51,11 @@
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 <img src="../libs/img/eincc.png" class=" img-fluid rounded-circle avatar ms-2">
-                Usuario
-
+                User
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                 <li><a class="dropdown-item" href="#">Configuracion</a></li>
-                <li><a class="dropdown-item" href="../">Cerrar Sesion</a></li>
+                <li><a class="dropdown-item" onclick="DestruirSesion()">Cerrar Sesion</a></li>
               </ul>
             </li>
           </ul>
@@ -63,5 +63,4 @@
       </div>
     </nav>
   </div>
-  <?php require('../libs/php/variables.php')?>
   </div>

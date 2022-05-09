@@ -1,3 +1,5 @@
 <?php
-mysqli_close($con);
+session_start();
+session_destroy();
+header("location:../../");
 ?>
