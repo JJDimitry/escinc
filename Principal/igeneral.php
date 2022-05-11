@@ -1,4 +1,4 @@
-<?php require('admin/hadmin.php')?>
+<?php require('admin/hadmin.php') ?>
 <title>Inspeccion General</title>
 </head>
 <body>

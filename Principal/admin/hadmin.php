@@ -1,3 +1,17 @@
+<?php
+session_start();
+error_reporting(0);
+$nombre=$_SESSION['Nombre'];
+$tipoUsuario = $_SESSION['TipoUsuario'];
+$img=$_SESSION['img'];     
+
+if($nombre == null || $nombre == ''){
+	header("location:../");
+    session_destroy();
+  
+}
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -8,11 +22,14 @@
 
   <link rel="icon" type="image/png" href="../libs/img/einco.png">
   <link rel="stylesheet" href="../libs/css/bootstrap/bootstrap.min.css">
+  <script src="../libs/js/jquery-3.5.1.min.js"></script>
 	<script src="../libs/js/bootstrap/bootstrap.min.js"></script>
   <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
   <link rel="stylesheet" href="../libs/css/estilos.css">
   <script src="../libs/js/functions.js"></script>
 
+  <input type="hidden" id="nombre" value="<?php echo $nombre;?>"></input>
+  <input type="hidden" id="imagen" value="<?php echo $img;?>"></input>
   <div class="d-flex">
     <div id="sidebar-container" class="bg-primary">
       <div class="logo">
@@ -48,14 +65,14 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
           <ul class="navbar-nav ms-auto">
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                <img src="../libs/img/eincc.png" class=" img-fluid rounded-circle avatar ms-2">
-                User
-              </a>
+            <li class="nav-item dropdown">                    
+              <img id="foto" class=" img-fluid rounded-circle avatar ms-2"> 
+              
+              <p id="user" class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false"></p>                                                       
+            
               <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                <li><a class="dropdown-item" href="#">Configuracion</a></li>
-                <li><a class="dropdown-item" onclick="DestruirSesion()">Cerrar Sesion</a></li>
+                <li><a href="#" class="btn btn-link">Configuración</a></li>
+                <li><button type="button" class="btn btn-link" onclick="DestruirSesion()">Cerrar Sesion</button></li>
               </ul>
             </li>
           </ul>
@@ -64,3 +81,4 @@
     </nav>
   </div>
   </div>
+

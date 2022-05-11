@@ -3,19 +3,22 @@ if(isset($_POST['CONTRASENA']) && !empty($_POST['CONTRASENA']) &&isset($_POST['U
     require 'conn.php';
     $contrasena=$_POST['CONTRASENA'];
     $usuario=$_POST['USUARIO'];
-    $tipoUsuario="";
-    
+    $img="";
     $consulta= "SELECT usuario.Nombre, lusuario.img, lusuario.TipoUsuario  FROM usuario, lusuario WHERE lusuario.NUsuario = '$usuario' AND lusuario.Contrasena = '$contrasena' AND lusuario.ID = usuario.ID";
     mysqli_set_charset($conexion,"utf8");
     $result=mysqli_query($conexion,$consulta);
     
     if(mysqli_num_rows($result)>0){
+        
         while ($ver = mysqli_fetch_row($result)) {
-            $tipoUsuario = $ver[0];
-          }
+            $usuario = $ver[0];
+            $img = $ver[1];
+            $tipoUsuario = $ver[2];
+          }         
           session_start();
           $_SESSION['Nombre']=$usuario;
-          $_SESSION['TipoUsuario']=$tipoUsuario;          
+          $_SESSION['TipoUsuario']=$tipoUsuario;
+          $_SESSION['img']=$img;          
     
         if($tipoUsuario == 1){
             $resp='Sesion administrador';

@@ -1,4 +1,4 @@
-<?php require('admin/hadmin.php')?>
+<?php require('admin/hadmin.php') ?>
 <title>Plantilla Directivo Docente</title>
 </head>
 <body>
