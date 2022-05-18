@@ -4,7 +4,10 @@ if(isset($_POST['CONTRASENA']) && !empty($_POST['CONTRASENA']) &&isset($_POST['U
     $contrasena=$_POST['CONTRASENA'];
     $usuario=$_POST['USUARIO'];
     $img="";
-    $consulta= "SELECT usuario.Nombre, lusuario.img, lusuario.TipoUsuario  FROM usuario, lusuario WHERE lusuario.NUsuario = '$usuario' AND lusuario.Contrasena = '$contrasena' AND lusuario.ID = usuario.ID";
+    $consulta= 
+        "SELECT usuario.Nombre, lusuario.img, lusuario.TipoUsuario 
+         FROM usuario, lusuario WHERE lusuario.NUsuario = '$usuario' 
+         AND lusuario.Contrasena = '$contrasena' AND lusuario.ID = usuario.ID";
     mysqli_set_charset($conexion,"utf8");
     $result=mysqli_query($conexion,$consulta);
     

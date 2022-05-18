@@ -1,7 +1,7 @@
 <?php require('admin/hadmin.php') ?>
 <title>Secuencia Didáctica</title>
 </head>
-<body>
+<body onload="user();">
 </body>
 
 </html>

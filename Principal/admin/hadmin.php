@@ -27,7 +27,7 @@ if($nombre == null || $nombre == ''){
   <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
   <link rel="stylesheet" href="../libs/css/estilos.css">
   <script src="../libs/js/functions.js"></script>
-
+  
   <input type="hidden" id="nombre" value="<?php echo $nombre;?>"></input>
   <input type="hidden" id="imagen" value="<?php echo $img;?>"></input>
   <div class="d-flex">
@@ -53,7 +53,6 @@ if($nombre == null || $nombre == ''){
           Secuencia Didáctica</a>
         <a href="#" class="d-block text-light p-3"><i class="icon ion-md-videocam lead"></i>&nbsp; Sala de Reuniones</a>
       </div>
-
     </div>
 
     <div class="w-100">
@@ -66,10 +65,9 @@ if($nombre == null || $nombre == ''){
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item dropdown">                    
-              <img id="foto" class=" img-fluid rounded-circle avatar ms-2"> 
+              <!--<img id="foto" class=" img-fluid rounded-circle avatar ms-2">               -->
+              <p id="user" class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false"></p>                                                                   
               
-              <p id="user" class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false"></p>                                                       
-            
               <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                 <li><a href="#" class="btn btn-link">Configuración</a></li>
                 <li><button type="button" class="btn btn-link" onclick="DestruirSesion()">Cerrar Sesion</button></li>
@@ -81,4 +79,3 @@ if($nombre == null || $nombre == ''){
     </nav>
   </div>
   </div>
-

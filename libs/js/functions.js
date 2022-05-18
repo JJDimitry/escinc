@@ -31,7 +31,8 @@ function iniciarSesion() {
 function user(){
     var nombre = $("#nombre").val();
     var imagen = $("#imagen").val();
-    $('#user').text(nombre);
+    var extension = "<img id='foto' class='img-fluid rounded-circle avatar ms-2'> ";
+    $('#user').html(extension + nombre);    
     var image = new Image();
     image.src = imagen;                          
     foto.setAttribute("src", imagen);
