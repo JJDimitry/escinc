@@ -23,14 +23,7 @@ if(isset($_POST['CONTRASENA']) && !empty($_POST['CONTRASENA']) &&isset($_POST['U
           $_SESSION['TipoUsuario']=$tipoUsuario;
           $_SESSION['img']=$img;          
     
-        if($tipoUsuario == 1){
-            $resp='Sesion administrador';
-           
-        }
-        else {
-            $resp='Sesion trabajador';
-        }          
-    
+           $resp= $tipoUsuario;
     }
     else{
         $resp=mysqli_error ($conexion);

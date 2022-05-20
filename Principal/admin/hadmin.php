@@ -6,7 +6,7 @@ $tipoUsuario = $_SESSION['TipoUsuario'];
 $img=$_SESSION['img'];     
 
 if($nombre == null || $nombre == ''){
-	header("location:../");
+	header("location:../../");
     session_destroy();
   
 }
@@ -20,23 +20,23 @@ if($nombre == null || $nombre == ''){
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="icon" type="image/png" href="../libs/img/einco.png">
-  <link rel="stylesheet" href="../libs/css/bootstrap/bootstrap.min.css">
-  <script src="../libs/js/jquery-3.5.1.min.js"></script>
-	<script src="../libs/js/bootstrap/bootstrap.min.js"></script>
+  <link rel="icon" type="image/png" href="../../libs/img/einco.png">
+  <link rel="stylesheet" href="../../libs/css/bootstrap/bootstrap.min.css">
+  <script src="../../libs/js/jquery-3.5.1.min.js"></script>
+	<script src="../../libs/js/bootstrap/bootstrap.min.js"></script>
   <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="../libs/css/estilos.css">
-  <script src="../libs/js/functions.js"></script>
+  <link rel="stylesheet" href="../../libs/css/estilos.css">
+  <script src="../../libs/js/functions.js"></script>
   
   <input type="hidden" id="nombre" value="<?php echo $nombre;?>"></input>
   <input type="hidden" id="imagen" value="<?php echo $img;?>"></input>
   <div class="d-flex">
     <div id="sidebar-container" class="bg-primary">
       <div class="logo">
-        <img src="../libs/img/eincr.png" alt="logo" width="150px">
+        <img src="../../libs/img/eincr.png" alt="logo" width="150px">
         <h4 class="text-light font-weight-bold">SASEI-UAGro</h4>
       </div>
-
+      
       <div class="menu">
         <a href="inicio.php" class="d-block text-light p-3"><i class="icon ion-md-home lead"></i>&nbsp; Inicio</a>
         <a href="cusuario.php" class="d-block text-light p-3"><i class="icon ion-md-people lead"></i>&nbsp; Control de

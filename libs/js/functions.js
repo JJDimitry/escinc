@@ -7,13 +7,14 @@ function iniciarSesion() {
             "USUARIO": usuario,
             "CONTRASENA": contrasena
         };        
+        alert(contrasena);
         $.ajax({
             method: 'POST',
             url: 'libs/db/login2.php',
             data: parametros,
-            success: function(resp) {                      
-                if (resp == 'Sesion trabajador') {
-                  location.href = 'Principal/inicio.php';
+            success: function(resp) {                                     
+                if (resp == 'ADMINISTRADOR') {
+                  location.href = 'Principal/admin/inicio.php';
                 } else if(resp == 'Sesion administrador'){                  
                     location.href = 'Principal/igeneral.php';
                 } else{
@@ -40,5 +41,5 @@ function user(){
 
 function DestruirSesion()
 {
-    location.href = "../libs/db/cerrar.php";
+    location.href = "../../libs/db/cerrar.php";
 }
