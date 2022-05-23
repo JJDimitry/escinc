@@ -1,6 +1,7 @@
 <?php require('hadmin.php') ?>
-<title>Control de Usuario</title>
+<title>Acuerdos de incorporación</title>
 </head>
 <body onload="user();">
 </body>
+
 </html>

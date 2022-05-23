@@ -1,5 +1,5 @@
 <?php require('hadmin.php') ?>
-<title>Inspeccion General</title>
+<title>Horarios</title>
 </head>
 <body onload="user();">
 </body>

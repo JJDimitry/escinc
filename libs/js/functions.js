@@ -13,11 +13,13 @@ function iniciarSesion() {
             url: 'libs/db/login2.php',
             data: parametros,
             success: function(resp) {                                     
-                if (resp == 'ADMINISTRADOR') {
+                if (resp == 'ADMIN') {
                   location.href = 'Principal/admin/inicio.php';
-                } else if(resp == 'Sesion administrador'){                  
-                    location.href = 'Principal/igeneral.php';
-                } else{
+                } else if(resp == 'DIRPOP' || resp == 'DIRPART' || resp == 'DIREXT'){                  
+                    location.href = 'Principal/directores/inicio.php';
+                } else if(resp == 'DOCPOP' || resp == 'DOCPART' || resp == 'DOCEXT'){                  
+                    location.href = 'Principal/docentes/inicio.php';
+                }else{
                     $('.campovacio').addClass('d-none');
                     $('.datoincorrecto').removeClass('d-none');
                 }

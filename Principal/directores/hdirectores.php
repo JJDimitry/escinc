@@ -30,8 +30,6 @@ if($nombre == null || $nombre == ''){
   
   <input type="hidden" id="nombre" value="<?php echo $nombre;?>"></input>
   <input type="hidden" id="imagen" value="<?php echo $img;?>"></input>
-
-
   <div class="d-flex">
     <div id="sidebar-container" class="bg-primary">
       <div class="logo">
@@ -65,8 +63,8 @@ if($nombre == null || $nombre == ''){
           </button>
           <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav ms-auto">
-              <li class="nav-item dropdown ms-auto">                                  
-                <p id="user" class="nav-link dropdown-toggle " href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false"></p>                                                                                 
+              <li class="nav-item dropdown ms-auto">
+                <p id="user" class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false"></p>                                                                                 
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                   <li><a href="#" class="btn btn-link">Configuración</a></li>
                   <li><button type="button" class="btn btn-link" onclick="DestruirSesion()">Cerrar Sesion</button></li>
@@ -77,5 +75,4 @@ if($nombre == null || $nombre == ''){
         </div>
       </nav>
     </div>
-  </div>  
-  
+  </div>

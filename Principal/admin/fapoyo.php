@@ -1,5 +1,5 @@
 <?php require('hadmin.php') ?>
-<title>Secuencia Didáctica</title>
+<title>Formatos de Apoyo</title>
 </head>
 <body onload="user();">
 </body>

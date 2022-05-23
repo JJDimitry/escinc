@@ -1,5 +1,5 @@
 <?php require('hadmin.php') ?>
-<title>Directorio Popular</title>
+<title>Evidencias de Clases</title>
 </head>
 <body onload="user();">
 </body>

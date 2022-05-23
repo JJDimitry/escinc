@@ -30,8 +30,6 @@ if($nombre == null || $nombre == ''){
   
   <input type="hidden" id="nombre" value="<?php echo $nombre;?>"></input>
   <input type="hidden" id="imagen" value="<?php echo $img;?>"></input>
-
-
   <div class="d-flex">
     <div id="sidebar-container" class="bg-primary">
       <div class="logo">
@@ -41,13 +39,7 @@ if($nombre == null || $nombre == ''){
       
       <div class="menu">
         <a href="inicio.php" class="d-block text-light p-2"><i class="icon ion-md-home lead"></i>&nbsp;&nbsp; Inicio</a>
-        <a href="dparticular.php" class="d-block text-light p-2"><i class="icon ion-md-albums lead"></i>&nbsp;&nbsp; Directorio Particular</a>
-        <a href="supervision.php" class="d-block text-light p-2"><i class="icon ion-md-people lead"></i>&nbsp;&nbsp; Supervisión</a>
-        <a href="ppddocente.php" class="d-block text-light p-2"><i class="icon ion-md-today lead"></i>&nbsp;&nbsp; Plantilla Directivo Docente</a>
-        <a href="aincorp.php" class="d-block text-light p-2"><i class="icon ion-md-list lead"></i></i>&nbsp;&nbsp; Acuerdos de incorporación</a>
-        <a href="horarios.php" class="d-block text-light p-2"><i class="icon ion-md-paper lead"></i>&nbsp;&nbsp; Horarios</a>        
-        <a href="eclases.php" class="d-block text-light p-2"><i class="icon ion-md-clipboard lead"></i>&nbsp;&nbsp; Evidencias de Clases</a>
-        <a href="fapoyo.php" class="d-block text-light p-2"><i class="icon icon ion-md-flag lead"></i>&nbsp;&nbsp; Formatos de Apoyo</a>
+        <a href="sdidactica.php" class="d-block text-light p-2"><i class="icon ion-md-paper lead"></i>&nbsp;&nbsp; Secuencia Didáctica</a>                
         <a href="#" class="d-block text-light p-2"><i class="icon ion-md-videocam lead"></i>&nbsp; Sala de Reuniones</a>        
       </div>
     </div>
@@ -65,8 +57,8 @@ if($nombre == null || $nombre == ''){
           </button>
           <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav ms-auto">
-              <li class="nav-item dropdown ms-auto">                                  
-                <p id="user" class="nav-link dropdown-toggle " href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false"></p>                                                                                 
+              <li class="nav-item dropdown ms-auto">
+                <p id="user" class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false"></p>                                                                                 
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                   <li><a href="#" class="btn btn-link">Configuración</a></li>
                   <li><button type="button" class="btn btn-link" onclick="DestruirSesion()">Cerrar Sesion</button></li>
@@ -77,5 +69,4 @@ if($nombre == null || $nombre == ''){
         </div>
       </nav>
     </div>
-  </div>  
-  
+  </div>

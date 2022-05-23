@@ -28,13 +28,19 @@ a {
 }
 
 #sidebar-container .logo{
-	padding: .875rem 1.25rem;
+	padding: .875rem 2.25rem;
 }
 
 #sidebar-container .menu {
-	width: 18rem;
+	width: 15rem;
 
 }
 .avatar{
 	max-width: 45px;
+}
+
+#content {
+	overflow-y: auto;
+	height: 100vh;
+	padding-bottom: 5rem;
 }
