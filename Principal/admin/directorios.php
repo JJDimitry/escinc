@@ -1,5 +1,5 @@
 <?php require('hadmin.php') ?>
-<title>Directorio Particular</title>
+<title>Directorios</title>
 </head>
 <body onload="user();">
 </body>

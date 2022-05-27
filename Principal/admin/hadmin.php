@@ -41,13 +41,15 @@ if($nombre == null || $nombre == ''){
       
       <div class="menu">
         <a href="inicio.php" class="d-block text-light p-2"><i class="icon ion-md-home lead"></i>&nbsp;&nbsp; Inicio</a>
-        <a href="dparticular.php" class="d-block text-light p-2"><i class="icon ion-md-albums lead"></i>&nbsp;&nbsp; Directorio Particular</a>
-        <a href="supervision.php" class="d-block text-light p-2"><i class="icon ion-md-people lead"></i>&nbsp;&nbsp; Supervisión</a>
+        <a href="directorios.php" class="d-block text-light p-2"><i class="icon ion-md-albums lead"></i>&nbsp;&nbsp; Directorios</a>
+        <a href="supervision.php" class="d-block text-light p-2"><i class="icon ion-md-people lead"></i>&nbsp;&nbsp; Formato 1 de Supervisión</a>
         <a href="ppddocente.php" class="d-block text-light p-2"><i class="icon ion-md-today lead"></i>&nbsp;&nbsp; Plantilla Directivo Docente</a>
         <a href="aincorp.php" class="d-block text-light p-2"><i class="icon ion-md-list lead"></i></i>&nbsp;&nbsp; Acuerdos de incorporación</a>
         <a href="horarios.php" class="d-block text-light p-2"><i class="icon ion-md-paper lead"></i>&nbsp;&nbsp; Horarios</a>        
         <a href="eclases.php" class="d-block text-light p-2"><i class="icon ion-md-clipboard lead"></i>&nbsp;&nbsp; Evidencias de Clases</a>
         <a href="fapoyo.php" class="d-block text-light p-2"><i class="icon icon ion-md-flag lead"></i>&nbsp;&nbsp; Formatos de Apoyo</a>
+        <a href="ccumpl.php" class="d-block text-light p-2"><i class="icon icon ion-md-wallet lead"></i>&nbsp;&nbsp; Control de Cumplimiento</a>
+        <a href="estadisticas.php" class="d-block text-light p-2"><i class="icon icon ion-md-stats lead"></i>&nbsp;&nbsp; Estadisticas</a>
         <a href="#" class="d-block text-light p-2"><i class="icon ion-md-videocam lead"></i>&nbsp; Sala de Reuniones</a>        
       </div>
     </div>

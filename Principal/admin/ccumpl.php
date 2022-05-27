@@ -1,5 +1,5 @@
 <?php require('hadmin.php') ?>
-<title>Acuerdos de Incorporación</title>
+<title>Control de Cumplimiento</title>
 </head>
 <body onload="user();">
 </body>

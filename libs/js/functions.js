@@ -7,7 +7,6 @@ function iniciarSesion() {
             "USUARIO": usuario,
             "CONTRASENA": contrasena
         };        
-        alert(contrasena);
         $.ajax({
             method: 'POST',
             url: 'libs/db/login2.php',
@@ -15,9 +14,25 @@ function iniciarSesion() {
             success: function(resp) {                                     
                 if (resp == 'ADMIN') {
                   location.href = 'Principal/admin/inicio.php';
-                } else if(resp == 'DIRPOP' || resp == 'DIRPART' || resp == 'DIREXT'){                  
+                } else if(resp == 'DIRPOP' || resp == 'DIRPART' || resp == 'DIREXT'){ 
+                    
+                    if(resp == 'DIRPOP')
+                    alert('Tipo de Usuario: Director Popular.');
+                    else if(resp == 'DIRPART')
+                    alert('Tipo de Usuario: Director Particular.');
+                    else
+                    alert('Tipo de Usuario: Director Extensión.');
+
                     location.href = 'Principal/directores/inicio.php';
-                } else if(resp == 'DOCPOP' || resp == 'DOCPART' || resp == 'DOCEXT'){                  
+                } else if(resp == 'DOCPOP' || resp == 'DOCPART' || resp == 'DOCEXT'){ 
+                    
+                    if(resp == 'DOCPOP')
+                    alert('Tipo de Usuario: Docente Popular.');
+                    else if(resp == 'DOCPART')
+                    alert('Tipo de Usuario: Docente Particular.');
+                    else
+                    alert('Tipo de Usuario: Docente Extensión.');
+
                     location.href = 'Principal/docentes/inicio.php';
                 }else{
                     $('.campovacio').addClass('d-none');
