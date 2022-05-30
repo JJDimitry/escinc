@@ -8,10 +8,12 @@ $img=$_SESSION['img'];
 if($nombre == null || $nombre == ''){
 	header("location:../../");
     session_destroy();
-  
 }
+else if($tipoUsuario == 'DIRPOP' || $tipoUsuario == 'DIRPART' || $tipoUsuario == 'DIREXT')
+  header("location:../directores/inicio.php");
+else if($tipoUsuario == 'DOCPOP' || $tipoUsuario == 'DOCPART' || $tipoUsuario == 'DOCEXT')
+  header("location:../docentes/inicio.php");
 ?>
-
 <!DOCTYPE html>
 <html lang="es">
 
@@ -23,6 +25,7 @@ if($nombre == null || $nombre == ''){
   <link rel="icon" type="image/png" href="../../libs/img/einco.png">
   <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
   <link rel="stylesheet" href="../../libs/css/bootstrap/bootstrap.min.css">    
+  <link rel="stylesheet" href="../../libs/css/menu.css">
   <link rel="stylesheet" href="../../libs/css/estilos.css">
   <script src="../../libs/js/jquery-3.5.1.min.js"></script>
 	<script src="../../libs/js/bootstrap/bootstrap.min.js"></script>
@@ -30,7 +33,6 @@ if($nombre == null || $nombre == ''){
   
   <input type="hidden" id="nombre" value="<?php echo $nombre;?>"></input>
   <input type="hidden" id="imagen" value="<?php echo $img;?>"></input>
-
 
   <div class="d-flex">
     <div id="sidebar-container" class="bg-primary">
@@ -43,7 +45,7 @@ if($nombre == null || $nombre == ''){
         <a href="inicio.php" class="d-block text-light p-2"><i class="icon ion-md-home lead"></i>&nbsp;&nbsp; Inicio</a>
         <a href="directorios.php" class="d-block text-light p-2"><i class="icon ion-md-albums lead"></i>&nbsp;&nbsp; Directorios</a>
         <a href="supervision.php" class="d-block text-light p-2"><i class="icon ion-md-people lead"></i>&nbsp;&nbsp; Formato 1 de Supervisión</a>
-        <a href="ppddocente.php" class="d-block text-light p-2"><i class="icon ion-md-today lead"></i>&nbsp;&nbsp; Plantilla Directivo Docente</a>
+        <a href="pddocente.php" class="d-block text-light p-2"><i class="icon ion-md-today lead"></i>&nbsp;&nbsp; Plantilla Directivo Docente</a>
         <a href="aincorp.php" class="d-block text-light p-2"><i class="icon ion-md-list lead"></i></i>&nbsp;&nbsp; Acuerdos de incorporación</a>
         <a href="horarios.php" class="d-block text-light p-2"><i class="icon ion-md-paper lead"></i>&nbsp;&nbsp; Horarios</a>        
         <a href="eclases.php" class="d-block text-light p-2"><i class="icon ion-md-clipboard lead"></i>&nbsp;&nbsp; Evidencias de Clases</a>
@@ -70,7 +72,7 @@ if($nombre == null || $nombre == ''){
               <li class="nav-item dropdown ms-auto">                                  
                 <p id="user" class="nav-link dropdown-toggle " href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false"></p>                                                                                 
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                  <li><a href="#" class="btn btn-link">Configuración</a></li>
+                  <li><a href="../config.php" class="btn btn-link">Configuración</a></li>
                   <li><button type="button" class="btn btn-link" onclick="DestruirSesion()">Cerrar Sesion</button></li>
                 </ul>
               </li>
