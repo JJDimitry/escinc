@@ -26,14 +26,26 @@ function datos(){
             $('#tel').val(cons[0].Tel);
             $('#gmail').val(cons[0].Email);
             $('#usuario').val(cons[0].NUsuario);
-            //$('#usuario').val(cons[0].Contrasena);
+            $('#x').val(cons[0].Contrasena);            
         }
-    });
+    });    
 }
 
 function aver(){
-    $("#nombre").val("bye bye");              
-    alert("yeh");         
+    var pswd0 = $('#x').val();
+    var pswd3 = hex_md5($('#cont3').val());  
+    var pswd2 = $('#cont2').val();  
+    var pswd1 = $('#cont1').val();    
+    if(pswd0 != pswd3){
+        alert("la contraseña actual ingresada es incorrecta")
+    }            
+    else if(pswd1 != pswd2){
+        alert("alguna de las nuevas contraseñas son diferentes")
+    }
+    else{
+    var b64 = $('#base64').text();
+    alert(b64);
+    }
 }
 
 $(document).ready(function() {

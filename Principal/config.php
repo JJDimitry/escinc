@@ -21,16 +21,19 @@ if($nombre == null || $nombre == ''){
     <link rel="icon" type="image/png" href="../libs/img/einco.png">
     <link rel="stylesheet" href="../libs/css/bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="../libs/css/estilos.css">
+
     <script src="../libs/js/jquery-3.5.1.min.js"></script>
     <script src="../libs/js/bootstrap.min.js"></script>
     <script src="../libs/js/croppr.min.js"></script>  
     <link rel="stylesheet" href="../libs/css/croppr.min.css">       <!--complemento del de arriba-->
     <script src="../libs/js/config.js"></script>
+    <script src="../libs/js/md5.js"></script>
     
     <title>Perfil</title>
     <input type="hidden" id="ID" value="<?php echo $id;?>">
     <input type="hidden" id="nombre" value="<?php echo $nombre;?>">
     <input type="hidden" id="imagen" value="<?php echo $img;?>">
+    <input type="hidden" id="x">
   </head>
 
   <body onload="datos()">
@@ -55,19 +58,19 @@ if($nombre == null || $nombre == ''){
                 	<h5>Cambiar contraseña:</h5>
             	</div>
             	<div class="col-12 text-center">
-                	<input type="password" class="form-control" id="contrasena1">
+                	<input type="password" class="form-control" id="cont1">
             	</div>
               <div class="col-12 text-center mt-3">
                 	<h5>Vuelva a escribir la contraseña:</h5>
             	</div>
             	<div class="col-12 text-center">
-                	<input type="password" class="form-control" id="contrasena2">
+                	<input type="password" class="form-control" id="cont2">
             	</div>
               <div class="col-12 text-center mt-3">
                 	<h5>Contraseña anterior:</h5>
             	</div>
             	<div class="col-12 text-center">
-                	<input type="password" class="form-control" id="contrasena3">
+                	<input type="password" class="form-control" id="cont3">
             	</div>
             	<div class="col-12 text-center mt-3 mb-1">
                 	<button type="button" class="btn btn-primary" onclick="aver()">Guardar Cambios</button>
