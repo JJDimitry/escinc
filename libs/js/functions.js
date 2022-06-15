@@ -9,7 +9,7 @@ function iniciarSesion() {
         };        
         $.ajax({
             method: 'POST',
-            url: 'libs/db/login2.php',
+            url: 'libs/db/login.php',
             data: parametros,
             success: function(resp) {                                     
                 if (resp == 'ADMIN') {
@@ -56,4 +56,17 @@ function user(){
 function DestruirSesion()
 {
     location.href = "../../libs/db/cerrar.php";
+}
+
+function subirpdf(){
+    var dato = "";
+    var mes = "";
+    let fecha = new Date();
+    dato = fecha.getDate();
+    mes = fecha.getMonth() + 1;
+    if (mes < 10)
+        mes = "0" + mes;
+    dato = dato + '/' + mes + '/';    
+    dato = dato + fecha.getFullYear();
+    alert(dato);
 }

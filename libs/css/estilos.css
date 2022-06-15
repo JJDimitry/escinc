@@ -1,5 +1,5 @@
 .avatar{
-	max-width: 45px;
+	max-width: 50px;
 }
 
 #content {
@@ -30,9 +30,15 @@ height: 100vh;
 }
 
 .left{
-	background: rgb(201, 201, 201);
+background: rgb(201, 201, 201);
 }
 
 .right{
 background: rgb(248, 248, 255);
+}
+
+.derecha{
+	top: 15%;
+	left: 18%;
+	position: absolute;
 }

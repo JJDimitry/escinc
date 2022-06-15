@@ -5,6 +5,37 @@ function cargarimg(){
     perfil.setAttribute("src", imagen);
 }
 
+function datos(){
+    cargarimg();
+    var id = $('#ID').val();
+    var nombre = $('#nombre').val();       
+    var parametros = {
+        "id": id,
+        "nombre": nombre
+    }; 
+    $.ajax({
+        method: 'POST',
+        url: '../libs/db/datos.php',
+        data: parametros,
+        success: function(resp) {                             
+            var cons = JSON.parse(resp);                                                                
+            $('#name').val(cons[0].Nombre);
+            $('#apellidos').val(cons[0].Apellidos);            
+            $('#fnac').val(cons[0].Fnac);
+            $('#direccion').val(cons[0].Dir);
+            $('#tel').val(cons[0].Tel);
+            $('#gmail').val(cons[0].Email);
+            $('#usuario').val(cons[0].NUsuario);
+            //$('#usuario').val(cons[0].Contrasena);
+        }
+    });
+}
+
+function aver(){
+    $("#nombre").val("bye bye");              
+    alert("yeh");         
+}
+
 $(document).ready(function() {
     $("#folio").keypress(function(e) { 
         var code = (e.keyCode ? e.keyCode : e.which); 

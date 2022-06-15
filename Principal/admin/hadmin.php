@@ -1,6 +1,7 @@
 <?php
 session_start();
 error_reporting(0);
+$id=$_SESSION['ID'];
 $nombre=$_SESSION['Nombre'];
 $tipoUsuario = $_SESSION['TipoUsuario'];
 $img=$_SESSION['img'];     
@@ -30,9 +31,10 @@ else if($tipoUsuario == 'DOCPOP' || $tipoUsuario == 'DOCPART' || $tipoUsuario ==
   <script src="../../libs/js/jquery-3.5.1.min.js"></script>
 	<script src="../../libs/js/bootstrap/bootstrap.min.js"></script>
   <script src="../../libs/js/functions.js"></script>
-  
-  <input type="hidden" id="nombre" value="<?php echo $nombre;?>"></input>
-  <input type="hidden" id="imagen" value="<?php echo $img;?>"></input>
+
+  <input type="hidden" id="ID" value="<?php echo $id;?>">
+  <input type="hidden" id="nombre" value="<?php echo $nombre;?>">
+  <input type="hidden" id="imagen" value="<?php echo $img;?>">
 
   <div class="d-flex">
     <div id="sidebar-container" class="bg-primary">

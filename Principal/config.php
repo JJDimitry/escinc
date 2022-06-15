@@ -1,6 +1,7 @@
 <?php
 session_start();
 error_reporting(0);
+$id=$_SESSION['ID'];
 $nombre=$_SESSION['Nombre'];
 $tipoUsuario = $_SESSION['TipoUsuario'];
 $img=$_SESSION['img'];     
@@ -27,12 +28,12 @@ if($nombre == null || $nombre == ''){
     <script src="../libs/js/config.js"></script>
     
     <title>Perfil</title>
-
-    <input type="hidden" id="nombre" value="<?php echo $nombre;?>"></input>
-    <input type="hidden" id="imagen" value="<?php echo $img;?>"></input>
+    <input type="hidden" id="ID" value="<?php echo $id;?>">
+    <input type="hidden" id="nombre" value="<?php echo $nombre;?>">
+    <input type="hidden" id="imagen" value="<?php echo $img;?>">
   </head>
 
-  <body onload="cargarimg()">
+  <body onload="datos()">
   <div class= "container">
     <div class="left">
     <div class="col-12 text-center mt-3 mb-2">            
@@ -48,28 +49,28 @@ if($nombre == null || $nombre == ''){
                     <h5>Nombre de usuario:</h5>
                 </div>
                 <div class="col-12 text-center">
-                	<input type="text" class="form-control" placeholder="Nombre de Usuario" id="usuario">
+                	<input type="text" class="form-control" id="usuario">
             	</div>
             	<div class="col-12 text-center mt-3">
                 	<h5>Cambiar contraseña:</h5>
             	</div>
             	<div class="col-12 text-center">
-                	<input type="password" class="form-control" placeholder="Contraseña" id="contrasena">
+                	<input type="password" class="form-control" id="contrasena1">
             	</div>
               <div class="col-12 text-center mt-3">
                 	<h5>Vuelva a escribir la contraseña:</h5>
             	</div>
             	<div class="col-12 text-center">
-                	<input type="password" class="form-control" placeholder="Contraseña" id="contrasena">
+                	<input type="password" class="form-control" id="contrasena2">
             	</div>
               <div class="col-12 text-center mt-3">
                 	<h5>Contraseña anterior:</h5>
             	</div>
             	<div class="col-12 text-center">
-                	<input type="password" class="form-control" placeholder="Contraseña" id="contrasena">
+                	<input type="password" class="form-control" id="contrasena3">
             	</div>
             	<div class="col-12 text-center mt-3 mb-1">
-                	<button type="button" class="btn btn-primary" onclick="">Guardar Cambios</button>
+                	<button type="button" class="btn btn-primary" onclick="aver()">Guardar Cambios</button>
             	</div>
   </div>
   <div class="right">
@@ -77,37 +78,37 @@ if($nombre == null || $nombre == ''){
                     <h5>Nombre's:</h5>
                 </div>
                 <div class="col-12 text-center">
-                	<input type="text" class="form-control" placeholder="Nombre's" id="usuario">
+                	<input type="text" class="form-control" id="name">
             	</div>
               <div class="col-12 text-center mt-4">
                     <h5>Apellido's:</h5>
                 </div>
                 <div class="col-12 text-center">
-                	<input type="text" class="form-control" placeholder="Apellido's" id="usuario">
+                	<input type="text" class="form-control" id="apellidos">
             	</div>
               <div class="col-12 text-center mt-4">
                     <h5>Fecha de Nacimiento:</h5>
                 </div>
                 <div class="col-12 text-center">
-                	<input type="text" class="form-control" placeholder="DD/MM/AAAA" id="usuario">
+                	<input type="text" class="form-control" id="fnac">
             	</div>
               <div class="col-12 text-center mt-4">
                     <h5>Dirección:</h5>
                 </div>
                 <div class="col-12 text-center">
-                	<input type="text" class="form-control" placeholder="Calle, Colonia, CP, Municipio" id="usuario">
+                	<input type="text" class="form-control" id="direccion">
             	</div>
               <div class="col-12 text-center mt-4">
                     <h5>Numero Telefónico:</h5>
                 </div>
                 <div class="col-12 text-center">
-                	<input type="text" class="form-control" placeholder="A 10 Digitos" id="usuario">
+                	<input type="text" class="form-control" id="tel">
             	</div>
               <div class="col-12 text-center mt-4">
                     <h5>Gmail:</h5>
                 </div>
                 <div class="col-12 text-center">
-                	<input type="text" class="form-control" placeholder="Correo Electrónico" id="usuario">
+                	<input type="text" class="form-control" id="gmail">
             	</div>
               <div class="col-12 text-center mt-3 mb-1">
                 	<button type="button" class="btn btn-primary" onclick="">Guardar Cambios</button>

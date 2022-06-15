@@ -10,13 +10,6 @@
     border-style: solid;
 }
 
-body {
-	overflow: hidden;
-	font-family: 'Muli', sans-serif;
-	font-weight: 300;
-	color: var(--primary);
-}
-
 a {
 	text-decoration: none;
 }
@@ -33,5 +26,4 @@ a {
 
 #sidebar-container .menu {
 	width: 15rem;
-
 }
