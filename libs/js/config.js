@@ -9,6 +9,7 @@ function datos(){
     cargarimg();
     var id = $('#ID').val();
     var nombre = $('#nombre').val();       
+    fn='2018-03-08'
     var parametros = {
         "id": id,
         "nombre": nombre
@@ -20,8 +21,10 @@ function datos(){
         success: function(resp) {                             
             var cons = JSON.parse(resp);                                                                
             $('#name').val(cons[0].Nombre);
-            $('#apellidos').val(cons[0].Apellidos);            
-            $('#fnac').val(cons[0].Fnac);
+            $('#apellidos').val(cons[0].Apellidos);
+            fn= cons[0].Fnac[6]; fn= fn + cons[0].Fnac[7]; fn= fn + cons[0].Fnac[8]; fn= fn + cons[0].Fnac[9];
+            fn= fn + "-"; fn= fn + cons[0].Fnac[3]; fn= fn + cons[0].Fnac[4]; fn= fn + "-"; fn= fn + cons[0].Fnac[0]; fn= fn + cons[0].Fnac[1];
+            $('#fnac').val(fn);          
             $('#direccion').val(cons[0].Dir);
             $('#tel').val(cons[0].Tel);
             $('#gmail').val(cons[0].Email);
@@ -31,13 +34,14 @@ function datos(){
     });    
 }
 
-function aver(){
+function udl(){
     var id = $('#ID').val();
     var pswd0 = $('#x').val();
     var pswd3 = hex_md5($('#cont3').val());  
     var pswd2 = $('#cont2').val();  
     var pswd1 = $('#cont1').val();    
-    var user = $('#usuario').val();
+    var user = $('#usuario').val().toUpperCase();    
+    alert(user);
     var img = $('#base64').text();
     var i = 0;
     if(pswd0 != pswd3){
@@ -75,6 +79,23 @@ function aver(){
             }
         });
     }
+}
+
+function udu(){
+    var id = $('#ID').val();
+    var nombre = $('#name').val();
+    var apellidos = $('#apellidos').val();
+    var fnac = $('#fnac').val();
+    var dir = $('#direccion').val().toUpperCase();
+    var tel = $('#tel').val();
+    var gmail = $('#gmail').val().toUpperCase();
+    alert(id);
+    alert(nombre);
+    alert(apellidos);
+    alert(fnac);
+    alert(dir);
+    alert(tel);
+    alert(gmail);
 }
 
 $(document).ready(function() {

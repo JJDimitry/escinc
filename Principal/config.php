@@ -73,7 +73,7 @@ if($nombre == null || $nombre == ''){
                 	<input type="password" class="form-control" id="cont3">
             	</div>
             	<div class="col-12 text-center mt-3 mb-1">
-                	<button type="button" class="btn btn-primary" onclick="aver()">Guardar Cambios</button>
+                	<button type="button" class="btn btn-primary" onclick="udl()">Guardar Cambios</button>
             	</div>
   </div>
   <div class="right">
@@ -93,7 +93,7 @@ if($nombre == null || $nombre == ''){
                     <h5>Fecha de Nacimiento:</h5>
                 </div>
                 <div class="col-12 text-center">
-                	<input type="text" class="form-control" id="fnac">
+                	<input type="date" class="form-control" id="fnac">
             	</div>
               <div class="col-12 text-center mt-4">
                     <h5>Dirección:</h5>
@@ -105,7 +105,7 @@ if($nombre == null || $nombre == ''){
                     <h5>Numero Telefónico:</h5>
                 </div>
                 <div class="col-12 text-center">
-                	<input type="text" class="form-control" id="tel">
+                	<input type="number" class="form-control" id="tel">
             	</div>
               <div class="col-12 text-center mt-4">
                     <h5>Gmail:</h5>
@@ -114,7 +114,7 @@ if($nombre == null || $nombre == ''){
                 	<input type="text" class="form-control" id="gmail">
             	</div>
               <div class="col-12 text-center mt-3 mb-1">
-                	<button type="button" class="btn btn-primary" onclick="">Guardar Cambios</button>
+                	<button type="button" class="btn btn-primary" onclick="udu()">Guardar Cambios</button>
             	</div>
   </div>
   </div>
