@@ -32,19 +32,48 @@ function datos(){
 }
 
 function aver(){
+    var id = $('#ID').val();
     var pswd0 = $('#x').val();
     var pswd3 = hex_md5($('#cont3').val());  
     var pswd2 = $('#cont2').val();  
     var pswd1 = $('#cont1').val();    
+    var user = $('#usuario').val();
+    var img = $('#base64').text();
+    var i = 0;
     if(pswd0 != pswd3){
-        alert("la contraseña actual ingresada es incorrecta")
+        alert("Contraseña anterior incorrecta.")
     }            
     else if(pswd1 != pswd2){
-        alert("alguna de las nuevas contraseñas son diferentes")
+        alert("Las contraseñas nuevas no coinciden.")
+    }
+    else if(user == ""){
+        alert("El nombre de usuario no puede quedar vacio")
+    }
+    else if(img != ""){    
+    i=1;
     }
     else{
-    var b64 = $('#base64').text();
-    alert(b64);
+        i=1;
+    }
+    if(pswd1 != ""){
+        pswd1= hex_md5(pswd1);        
+    }
+
+    if(i==1){                
+        var parametros = {
+            "id": id,
+            "user": user,
+            "pswd": pswd1,
+            "img": img
+        };   
+        $.ajax({
+            method: 'POST',
+            url: '../libs/db/adl.php',
+            data: parametros,
+            success: function(resp) {
+                alert(resp);
+            }
+        });
     }
 }
 
@@ -74,7 +103,7 @@ document.addEventListener('DOMContentLoaded', () => {
     /**
      * Método que abre el editor con la imagen seleccionada
      */
-    function abrirEditor(e) {
+    function abrirEditor(e) {        
         $('#preview').show();
         // Obtiene la imagen
         urlImage = URL.createObjectURL(e.target.files[0]);
@@ -92,12 +121,12 @@ document.addEventListener('DOMContentLoaded', () => {
             aspectRatio: 1,
             startSize: [70, 70],
             onCropEnd: recortarImagen
-        })
+        })        
     }
     /**
      * Método que recorta la imagen con las coordenadas proporcionadas con croppr.js
      */
-    function recortarImagen(data) {
+    function recortarImagen(data) {        
         // Variables
         const inicioX = data.x;
         const inicioY = data.y;
