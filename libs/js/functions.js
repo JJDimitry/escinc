@@ -58,7 +58,24 @@ function DestruirSesion()
     location.href = "../../libs/db/cerrar.php";
 }
 
-function subirpdf(){
+function subirpdf(){       
+    var pdf2 = document.getElementById("pdf").files; 
+    if (pdf2.length > 0) {   
+        var fileToLoad = pdf2[0];            
+        var fileReader = new FileReader();
+        var base64;            
+        fileReader.onload = function(fileLoadedEvent) {
+            base64 = fileLoadedEvent.target.result;                
+            sdidact(base64);
+            };            
+        fileReader.readAsDataURL(fileToLoad);  
+    }          
+    else
+    alert("favor de seleccionar un archivo para subir.");
+}
+
+
+function sdidact(base64){
     var dato = "";
     var mes = "";
     let fecha = new Date();
@@ -68,5 +85,24 @@ function subirpdf(){
         mes = "0" + mes;
     dato = dato + '/' + mes + '/';    
     dato = dato + fecha.getFullYear();
-    alert(dato);
+    var npdf = $("#npdf").val();
+    var id = $("#ID").val(); 
+    
+    if(npdf == "")
+        alert("favor de escribir un nombre al archivo a subir.");
+    else
+    var parametros = {
+        "id": id,
+        "dato": dato,
+        "npdf": npdf,
+        "base64": base64
+    }; 
+    $.ajax({
+        method: 'POST',
+        url: '../../libs/db/ssec.php',
+        data: parametros,
+        success: function(resp) {                             
+        alert(resp);
+        }
+    });   
 }
