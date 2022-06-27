@@ -1,3 +1,16 @@
+function mostrar(){        
+    var eye = document.getElementById('Eye');
+    var cont = document.getElementById('contrasena');
+    if(cont.type == "password"){
+    cont.type = "text";
+    eye.className = "icon ion-md-eye-off ico";
+    }
+    else{
+        cont.type = "password";
+        eye.className = "icon ion-md-eye ico";
+    }
+}
+
 function iniciarSesion() {    
     var usuario = $('#usuario').val();
     var contrasena = $('#contrasena').val();
@@ -71,7 +84,7 @@ function subirpdf(){
         fileReader.readAsDataURL(fileToLoad);  
     }          
     else
-    alert("favor de seleccionar un archivo para subir.");
+        alert("favor de seleccionar un archivo para subir.");
 }
 
 
@@ -90,19 +103,26 @@ function sdidact(base64){
     
     if(npdf == "")
         alert("favor de escribir un nombre al archivo a subir.");
-    else
-    var parametros = {
-        "id": id,
-        "dato": dato,
-        "npdf": npdf,
-        "base64": base64
-    }; 
-    $.ajax({
-        method: 'POST',
-        url: '../../libs/db/ssec.php',
-        data: parametros,
-        success: function(resp) {                             
-        alert(resp);
-        }
-    });   
+    else{
+        var parametros = {
+            "id": id,
+            "dato": dato,
+            "npdf": npdf,
+            "base64": base64
+            }; 
+        $.ajax({
+            method: 'POST',
+            url: '../../libs/db/ssec.php',
+            data: parametros,
+            success: function(resp) {                             
+                alert(resp);
+                if(resp == "PDF Subido."){
+                    $('#npdf').val(null);
+                    $('#pdf').val(null);
+                    let pdfWindow = window.open();
+                    pdfWindow.document.write( "<iframe width='100%' height='100%' src='" + base64 +"'></iframe>" )
+                    }
+                }
+        });  
+    } 
 }

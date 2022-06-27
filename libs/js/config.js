@@ -1,3 +1,41 @@
+function mostrar1(){        
+    var eye1 = document.getElementById('Eye1');
+    var cont1 = document.getElementById('cont1');
+    if(cont1.type == "password"){
+    cont1.type = "text";
+    eye1.className = "icon ion-md-eye-off ico";
+    }
+    else{
+        cont1.type = "password";
+        eye1.className = "icon ion-md-eye ico";
+    }
+}
+function mostrar2(){        
+    var eye2 = document.getElementById('Eye2');
+    var cont2 = document.getElementById('cont2');
+    if(cont2.type == "password"){
+    cont2.type = "text";
+    eye2.className = "icon ion-md-eye-off ico";
+    }
+    else{
+        cont2.type = "password";
+        eye2.className = "icon ion-md-eye ico";
+    }
+}
+function mostrar3(){        
+    var eye3 = document.getElementById('Eye3');
+    var cont3 = document.getElementById('cont3');
+    if(cont3.type == "password"){
+    cont3.type = "text";
+    eye3.className = "icon ion-md-eye-off ico";
+    }
+    else{
+        cont3.type = "password";
+        eye3.className = "icon ion-md-eye ico";
+    }
+}
+
+
 function cargarimg(){        
     var imagen = $("#imagen").val();    
     var image = new Image();
@@ -81,7 +119,7 @@ function udl(){
     }
 }
 
-function udu(){
+function udu(){    
     var id = $('#ID').val();
     var nombre = $('#name').val();
     var apellidos = $('#apellidos').val();
@@ -89,13 +127,50 @@ function udu(){
     var dir = $('#direccion').val().toUpperCase();
     var tel = $('#tel').val();
     var gmail = $('#gmail').val().toUpperCase();
-    alert(id);
-    alert(nombre);
-    alert(apellidos);
-    alert(fnac);
-    alert(dir);
-    alert(tel);
-    alert(gmail);
+        var anio= new Date(fnac).getFullYear();
+        var mes = new Date(fnac).getMonth() + 1;
+        var dia= new Date(fnac).getDate() + 1;
+        if(mes < 10)
+            mes = "0" + mes;
+        if(dia < 10)
+            dia = "0" + dia;
+        fnac = dia + '/' + mes + '/' + anio;
+
+    if( nombre.trim().length <= 0 || apellidos.trim().length <= 0 || dir.trim().length <= 0 || tel.trim().length <= 0 || gmail.trim().length <= 0) 
+        alert("Favor de poner datos permitidos y no dejar campos vacios: " +  tel.trim().length);
+    else if(fnac.trim().length != 10 || anio >= 2007 || anio <= 1940)
+        alert("favor de poner una fecha de nacimiento valida. año:" + anio);
+    else if(tel.length != 10)
+        alert("Favor de poner un numero telefonico a 10 digitos o un numero valido.");
+    else{
+        var parametros = {
+            "id": id,
+            "nombre": nombre,
+            "apellidos": apellidos,
+            "fnac": fnac,
+            "dir": dir,
+            "tel": tel,
+            "gmail": gmail
+            }; 
+        $.ajax({
+            method: 'POST',
+            url: '../libs/db/adu.php',
+            data: parametros,
+            success: function(resp) {
+                alert(resp);
+            }
+        });
+    }
+}
+
+function volver(){
+    tu=$('#tu').val();
+    if (tu == "ADMIN")
+        location.href = '../Principal/admin/inicio.php';
+    if (tu == 'DIRPOP' || tu == 'DIRPART' || tu == 'DIREXT')
+        location.href = '../Principal/directores/inicio.php';
+    if (tu == 'DOCPOP' || tu == 'DOCPART' || tu == 'DOCEXT')
+        location.href = '../Principal/docentes/inicio.php';
 }
 
 $(document).ready(function() {

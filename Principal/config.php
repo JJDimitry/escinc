@@ -19,6 +19,7 @@ if($nombre == null || $nombre == ''){
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="../libs/img/einco.png">
+    <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../libs/css/bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="../libs/css/estilos.css">
 
@@ -33,6 +34,7 @@ if($nombre == null || $nombre == ''){
     <input type="hidden" id="ID" value="<?php echo $id;?>">
     <input type="hidden" id="nombre" value="<?php echo $nombre;?>">
     <input type="hidden" id="imagen" value="<?php echo $img;?>">
+    <input type="hidden" id="tu" value="<?php echo $tipoUsuario;?>">
     <input type="hidden" id="x">
   </head>
 
@@ -55,22 +57,26 @@ if($nombre == null || $nombre == ''){
                 	<input type="text" class="form-control" id="usuario">
             	</div>
             	<div class="col-12 text-center mt-3">
-                	<h5>Cambiar contraseña:</h5>
+                	<h5>Cambiar contraseña:</h5>                                    
             	</div>
-            	<div class="col-12 text-center">
-                	<input type="password" class="form-control" id="cont1">
+            	<div class="col-12 text-center contain">
+                	<input type="password" class="form-control passw" id="cont1">
+                  <i class="icon ion-md-eye ico" id="Eye1" onclick="mostrar1();"></i>
             	</div>
+
               <div class="col-12 text-center mt-3">
                 	<h5>Vuelva a escribir la contraseña:</h5>
             	</div>
-            	<div class="col-12 text-center">
-                	<input type="password" class="form-control" id="cont2">
+            	<div class="col-12 text-center contain ">
+                	<input type="password" class="form-control passw" id="cont2">
+                  <i class="icon ion-md-eye ico" id="Eye2" onclick="mostrar2();"></i>
             	</div>
               <div class="col-12 text-center mt-3">
                 	<h5>Contraseña anterior:</h5>
             	</div>
-            	<div class="col-12 text-center">
-                	<input type="password" class="form-control" id="cont3">
+            	<div class="col-12 text-center contain">
+                	<input type="password" class="form-control passw" id="cont3">
+                  <i class="icon ion-md-eye ico" id="Eye" onclick="mostrar3();"></i>
             	</div>
             	<div class="col-12 text-center mt-3 mb-1">
                 	<button type="button" class="btn btn-primary" onclick="udl()">Guardar Cambios</button>
@@ -93,7 +99,7 @@ if($nombre == null || $nombre == ''){
                     <h5>Fecha de Nacimiento:</h5>
                 </div>
                 <div class="col-12 text-center">
-                	<input type="date" class="form-control" id="fnac">
+                	<input type="date" class="form-control" id="fnac">                  
             	</div>
               <div class="col-12 text-center mt-4">
                     <h5>Dirección:</h5>
@@ -114,7 +120,8 @@ if($nombre == null || $nombre == ''){
                 	<input type="text" class="form-control" id="gmail">
             	</div>
               <div class="col-12 text-center mt-3 mb-1">
-                	<button type="button" class="btn btn-primary" onclick="udu()">Guardar Cambios</button>
+                <button type="button" class="btn btn-primary" onclick="volver()">Volver</button>
+                <button type="button" class="btn btn-primary" onclick="udu()">Guardar Cambios</button>
             	</div>
   </div>
   </div>

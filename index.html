@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
 
+    <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
     <link rel="stylesheet" href="libs/css/bootstrap/bootstrap.min.css">    
     <link rel="stylesheet" href="libs/css/login.css">
 
@@ -34,8 +35,9 @@
             	<div class="col-12 text-center mt-3">
                 	<h5>Contraseña</h5>
             	</div>
-            	<div class="col-12 text-center">
-                	<input type="password" class="form-control" placeholder="Contraseña" id="contrasena">
+            	<div class="col-12 text-center contain">
+                	<input type="password" class="form-control" id="contrasena">                    
+                  <i class="icon ion-md-eye ico" id="Eye" onclick="mostrar();"></i>
             	</div>
             	<div class="col-12 text-center mt-3 mb-1">
                 	<button type="button" class="btn btn-primary" onclick="iniciarSesion()">Iniciar Sesión</button>
