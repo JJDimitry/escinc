@@ -23,5 +23,4 @@ else{
 }
 mysqli_close($conexion);
 echo $resp;
-
 ?>

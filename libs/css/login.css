@@ -5,6 +5,7 @@ body {
     background-size: auto;
     background-position: center;
 }
+
 .formulario{
       background: rgb(120, 120, 120, .5);
       padding: 20px;
@@ -27,6 +28,7 @@ body {
 	opacity: 0.3;
 	cursor: pointer;
 }
+
 .icon:hover{
 	opacity: 0.8;
 }
