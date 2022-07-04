@@ -56,7 +56,7 @@ function datos(){
         method: 'POST',
         url: '../libs/db/datos.php',
         data: parametros,
-        success: function(resp) {                             
+        success: function(resp) {                  
             var cons = JSON.parse(resp);                                                                
             $('#name').val(cons[0].Nombre);
             $('#apellidos').val(cons[0].Apellidos);
@@ -120,6 +120,8 @@ function udl(){
 }
 
 function udu(){    
+    let fecha = new Date();
+    dato = fecha.getFullYear();
     var id = $('#ID').val();
     var nombre = $('#name').val();
     var apellidos = $('#apellidos').val();
@@ -138,7 +140,7 @@ function udu(){
 
     if( nombre.trim().length <= 0 || apellidos.trim().length <= 0 || dir.trim().length <= 0 || tel.trim().length <= 0 || gmail.trim().length <= 0) 
         alert("Favor de poner datos permitidos y no dejar campos vacios: " +  tel.trim().length);
-    else if(fnac.trim().length != 10 || anio >= 2007 || anio <= 1940)
+    else if(fnac.trim().length != 10 || dato - anio <= 15 || dato - anio >= 75)
         alert("favor de poner una fecha de nacimiento valida. año:" + anio);
     else if(tel.length != 10)
         alert("Favor de poner un numero telefonico a 10 digitos o un numero valido.");

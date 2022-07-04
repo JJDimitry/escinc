@@ -29,7 +29,7 @@ else if($tipoUsuario == 'DIRPOP' || $tipoUsuario == 'DIRPART' || $tipoUsuario ==
   <link rel="stylesheet" href="../../libs/css/bootstrap/bootstrap.min.css">    
   <link rel="stylesheet" href="../../libs/css/menu.css">
   <link rel="stylesheet" href="../../libs/css/estilos.css">
-  <script src="../../libs/js/jquery-3.5.1.min.js"></script>
+  <script src="../../libs/js/jquery-3.5.1.min.js"></script>  
 	<script src="../../libs/js/bootstrap/bootstrap.min.js"></script>
   <script src="../../libs/js/functions.js"></script>
   

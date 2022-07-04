@@ -52,7 +52,7 @@ background: rgb(248, 248, 255);
 	box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.05);
 }
 
-.icon{
+.icon2{
 	position: absolute;
 	height: 60%;
 	top: 50%;
@@ -61,6 +61,35 @@ background: rgb(248, 248, 255);
 	opacity: 0.3;
 	cursor: pointer;
 }
-.icon:hover{
+
+.icon2:hover{
 	opacity: 0.8;
 }
+
+.tabla{         
+    border: 2px solid black;    
+    text-align: center;   
+    margin: auto;            
+    margin-bottom: 5px;
+    width: 400px;
+    height: 50px;            
+    border-collapse:collapse; 
+}
+.select:hover{
+	background-color: rgb(5, 5, 5);
+		color: rgb(0, 0, 0);
+	}
+	
+	.tabla td { 
+		padding: 2px; 
+		border: solid 1px rgb(0, 0, 0); 
+		color: #000000; 
+		text-align:center;
+	}
+	.tabla th { 
+		padding: 4px 2px;	  
+		background-color: rgb(0, 183, 255);
+		border-left: solid 1px #000000; 
+	}
+	.tabla tbody tr:nth-child(odd)		{ background-color:rgb(126, 125, 125); }
+	.tabla tbody tr:nth-child(even)		{ background-color:rgb(255, 255, 255); }

@@ -19,5 +19,4 @@ $sql="SELECT usuario.Nombre, usuario.Apellidos, usuario.Fnac, usuario.Dir, usuar
        $json_string = "vacio";    
    }
    echo $json_string;
-
 ?>

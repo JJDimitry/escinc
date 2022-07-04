@@ -1,7 +1,7 @@
 <?php require('hdocentes.php') ?>
 <title>Secuencia Didáctica</title>
 </head>
-<body onload="user();">
+<body onload="user(), datos()">
   <div class="derecha">
     <div class="col-12 text-center mt-3 mb-3">
       <input type="text" class="form-control" placeholder="Nombre del archivo" id="npdf">
@@ -10,6 +10,16 @@
     <div class="col-12 text-center mt-3 mb-1">
       <button type="button" class="btn btn-primary" onclick="subirpdf()">Subir Archivo</button>
     </div>
+    <table class="tabla">            
+      <thead>
+        <th>ID de archivo</th>
+        <th>Nombre de Archivo</th>
+        <th>Fecha de subida</th>
+        <th>Opciones</th>
+      </thead> 
+      <tbody id="result">    
+      </tbody>
+    </table>
   </div>
 </body>
 </html>
