@@ -60,7 +60,7 @@ if($nombre == null || $nombre == ''){
                 	<h5>Cambiar contraseña:</h5>                                    
             	</div>
             	<div class="col-12 text-center contain">
-                	<input type="password" class="form-control passw" id="cont1">
+                	<input type="password" placeholder="Nueva Contraseña" class="form-control passw" id="cont1">
                   <i class="icon2 ion-md-eye ico" id="Eye1" onclick="mostrar1();"></i>
             	</div>
 
@@ -68,14 +68,14 @@ if($nombre == null || $nombre == ''){
                 	<h5>Vuelva a escribir la contraseña:</h5>
             	</div>
             	<div class="col-12 text-center contain ">
-                	<input type="password" class="form-control passw" id="cont2">
+                	<input type="password"  placeholder="Volver a escribir contraseña nueva" class="form-control passw" id="cont2">
                   <i class="icon2 ion-md-eye ico" id="Eye2" onclick="mostrar2();"></i>
             	</div>
               <div class="col-12 text-center mt-3">
-                	<h5>Contraseña anterior:</h5>
+                	<h5>Introduzca su contraseña para guardar estos cambios:</h5>
             	</div>
             	<div class="col-12 text-center contain">
-                	<input type="password" class="form-control passw" id="cont3">
+                	<input type="password" placeholder="Contraseña actual" class="form-control passw" id="cont3">
                   <i class="icon2 ion-md-eye ico" id="Eye" onclick="mostrar3();"></i>
             	</div>
             	<div class="col-12 text-center mt-3 mb-1">

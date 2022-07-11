@@ -1,5 +1,4 @@
 <?php
-if(isset($_POST['CONTRASENA']) && !empty($_POST['CONTRASENA']) &&isset($_POST['USUARIO']) && !empty($_POST['USUARIO'])){
     require 'conn.php';
     $contrasena=$_POST['CONTRASENA'];
     $usuario=$_POST['USUARIO'];
@@ -32,10 +31,6 @@ if(isset($_POST['CONTRASENA']) && !empty($_POST['CONTRASENA']) &&isset($_POST['U
         $resp=mysqli_error ($conexion);
     }
     mysqli_close($conexion);
-}
-else{
- $resp= 'Buen intento, los campos estan vacios';
-}
 
 echo $resp;
 ?>

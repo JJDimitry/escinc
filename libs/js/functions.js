@@ -11,51 +11,6 @@ function mostrar(){
     }
 }
 
-function iniciarSesion() {    
-    var usuario = $('#usuario').val();
-    var contrasena = $('#contrasena').val();
-    if (usuario.length > 0 && contrasena.length > 0) {        
-        contrasena = hex_md5(contrasena);
-        var parametros = {
-            "USUARIO": usuario,
-            "CONTRASENA": contrasena
-        };        
-        $.ajax({
-            method: 'POST',
-            url: 'libs/db/login.php',
-            data: parametros,
-            success: function(resp) {                                     
-                if (resp == 'ADMIN') {
-                    alert('Tipo de Usuario: Administrador.');
-                  location.href = 'Principal/admin/inicio.php';                  
-                } else if(resp == 'DIRPOP' || resp == 'DIRPART' || resp == 'DIREXT'){                     
-                    if(resp == 'DIRPOP')
-                    alert('Tipo de Usuario: Director Popular.');
-                    else if(resp == 'DIRPART')
-                    alert('Tipo de Usuario: Director Particular.');
-                    else
-                    alert('Tipo de Usuario: Director Extensión.');
-                    location.href = 'Principal/directores/inicio.php';
-                } else if(resp == 'DOCPOP' || resp == 'DOCPART' || resp == 'DOCEXT'){                     
-                    if(resp == 'DOCPOP')
-                    alert('Tipo de Usuario: Docente Popular.');
-                    else if(resp == 'DOCPART')
-                    alert('Tipo de Usuario: Docente Particular.');
-                    else
-                    alert('Tipo de Usuario: Docente Extensión.');
-                    location.href = 'Principal/docentes/inicio.php';
-                }else{
-                    $('.campovacio').addClass('d-none');
-                    $('.datoincorrecto').removeClass('d-none');
-                }
-            }
-        });
-    } else {
-       $('.datoincorrecto').addClass('d-none');
-      $('.campovacio').removeClass('d-none');
-    }    
-}
-
 function user(){
     var nombre = $("#nombre").val();
     var imagen = $("#imagen").val();
@@ -143,8 +98,8 @@ function datos(){
                        "<td tittle>" + cons[i].ID + "</td>" +
                        "<td>" + cons[i].npdf + "</td>" +
                        "<td>" + cons[i].fecha + "</td>" +
-                       "<td><i title='Visualizar' class='icon ion-md-today' id=" + cons[i].ID + " onclick='ver(this.id)'></i>" + 
-                       "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i title='Borrar' class='icon ion-md-trash' id=" + cons[i].ID + " onclick='del(this.id)'></i></td></tr>"; 
+                       "<td><i title='Visualizar' class='icon ion-md-today selec' id=" + cons[i].ID + " onclick='ver(this.id)'></i>" + 
+                       "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i title='Borrar' class='icon ion-md-trash selec' id=" + cons[i].ID + " onclick='del(this.id)'></i></td></tr>"; 
                        $(n).appendTo("#result");
                 }                
             }

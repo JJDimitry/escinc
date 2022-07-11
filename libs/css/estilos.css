@@ -75,10 +75,9 @@ background: rgb(248, 248, 255);
     height: 50px;            
     border-collapse:collapse; 
 }
-.select:hover{
-	background-color: rgb(5, 5, 5);
-		color: rgb(0, 0, 0);
-	}
+.selec{
+    cursor: pointer; 
+}
 	
 	.tabla td { 
 		padding: 2px; 
@@ -88,8 +87,8 @@ background: rgb(248, 248, 255);
 	}
 	.tabla th { 
 		padding: 4px 2px;	  
-		background-color: rgb(0, 183, 255);
+		background-color: #3786fc;
 		border-left: solid 1px #000000; 
 	}
-	.tabla tbody tr:nth-child(odd)		{ background-color:rgb(126, 125, 125); }
+	.tabla tbody tr:nth-child(odd)		{ background-color:rgb(190, 190, 190); }
 	.tabla tbody tr:nth-child(even)		{ background-color:rgb(255, 255, 255); }

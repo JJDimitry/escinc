@@ -54,7 +54,7 @@ else if($tipoUsuario == 'DOCPOP' || $tipoUsuario == 'DOCPART' || $tipoUsuario ==
         <a href="fapoyo.php" class="d-block text-light p-2"><i class="icon icon ion-md-flag lead"></i>&nbsp;&nbsp; Formatos de Apoyo</a>
         <a href="ccumpl.php" class="d-block text-light p-2"><i class="icon icon ion-md-wallet lead"></i>&nbsp;&nbsp; Control de Cumplimiento</a>
         <a href="estadisticas.php" class="d-block text-light p-2"><i class="icon icon ion-md-stats lead"></i>&nbsp;&nbsp; Estadisticas</a>
-        <a href="#" class="d-block text-light p-2"><i class="icon ion-md-videocam lead"></i>&nbsp; Sala de Reuniones</a>        
+        <a href="https://zoom.us/" class="d-block text-light p-2" target="_blank"><i class="icon ion-md-videocam lead"></i>&nbsp; Sala de Reuniones</a>        
       </div>
     </div>
 

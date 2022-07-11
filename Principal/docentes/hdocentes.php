@@ -46,7 +46,7 @@ else if($tipoUsuario == 'DIRPOP' || $tipoUsuario == 'DIRPART' || $tipoUsuario ==
       <div class="menu">
         <a href="inicio.php" class="d-block text-light p-2"><i class="icon ion-md-home lead"></i>&nbsp;&nbsp; Inicio</a>
         <a href="sdidactica.php" class="d-block text-light p-2"><i class="icon ion-md-paper lead"></i>&nbsp;&nbsp; Secuencia Didáctica</a>                
-        <a href="#" class="d-block text-light p-2"><i class="icon ion-md-videocam lead"></i>&nbsp; Sala de Reuniones</a>        
+        <a href="https://zoom.us/" class="d-block text-light p-2" target="_blank"><i class="icon ion-md-videocam lead"></i>&nbsp; Sala de Reuniones</a>        
       </div>
     </div>
 

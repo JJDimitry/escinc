@@ -137,8 +137,11 @@ function udu(){
         if(dia < 10)
             dia = "0" + dia;
         fnac = dia + '/' + mes + '/' + anio;
-
-    if( nombre.trim().length <= 0 || apellidos.trim().length <= 0 || dir.trim().length <= 0 || tel.trim().length <= 0 || gmail.trim().length <= 0) 
+    var correo = verificar(gmail);
+    
+    if(correo == 1)
+        alert("Correo de Gmail no valido.");
+    else if( nombre.trim().length <= 0 || apellidos.trim().length <= 0 || dir.trim().length <= 0 || tel.trim().length <= 0 || gmail.trim().length <= 0) 
         alert("Favor de poner datos permitidos y no dejar campos vacios: " +  tel.trim().length);
     else if(fnac.trim().length != 10 || dato - anio <= 15 || dato - anio >= 75)
         alert("favor de poner una fecha de nacimiento valida. año:" + anio);
@@ -163,6 +166,18 @@ function udu(){
             }
         });
     }
+}
+
+function verificar(gmail){
+    var ret=0;
+    var c= gmail.indexOf('@');
+    if(c != -1)
+    {
+        c= gmail.trim().length - 1;
+        if(gmail[c-2] == "." || gmail[c-3] == ".")
+        return 1
+    }    
+    return 0;
 }
 
 function volver(){
