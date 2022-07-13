@@ -1,40 +1,15 @@
-function mostrar1(){        
-    var eye1 = document.getElementById('Eye1');
-    var cont1 = document.getElementById('cont1');
-    if(cont1.type == "password"){
-    cont1.type = "text";
-    eye1.className = "icon ion-md-eye-off ico";
+function mostrar(a){            
+    var eye = document.getElementById('Eye' + a);
+    var cont = document.getElementById('cont'+ a);
+    if(cont.type == "password"){
+    cont.type = "text";
+    eye.className = "icon2 ion-md-eye-off ico";
     }
     else{
-        cont1.type = "password";
-        eye1.className = "icon ion-md-eye ico";
+        cont.type = "password";
+        eye.className = "icon2 ion-md-eye ico";
     }
 }
-function mostrar2(){        
-    var eye2 = document.getElementById('Eye2');
-    var cont2 = document.getElementById('cont2');
-    if(cont2.type == "password"){
-    cont2.type = "text";
-    eye2.className = "icon ion-md-eye-off ico";
-    }
-    else{
-        cont2.type = "password";
-        eye2.className = "icon ion-md-eye ico";
-    }
-}
-function mostrar3(){        
-    var eye3 = document.getElementById('Eye3');
-    var cont3 = document.getElementById('cont3');
-    if(cont3.type == "password"){
-    cont3.type = "text";
-    eye3.className = "icon ion-md-eye-off ico";
-    }
-    else{
-        cont3.type = "password";
-        eye3.className = "icon ion-md-eye ico";
-    }
-}
-
 
 function cargarimg(){        
     var imagen = $("#imagen").val();    

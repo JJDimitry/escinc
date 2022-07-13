@@ -31,15 +31,15 @@
                 	<h5>Contraseña</h5>
             	</div>
             	<div class="col-12 text-center contain">
-                	<input type="password" class="form-control" id="contrasena">                    
-                  <i class="icon ion-md-eye ico" id="Eye" onclick="mostrar();"></i>
+                	<input type="password" class="form-control" id="cont1">                    
+                  <i class="icon ion-md-eye ico" id="Eye1" onclick="mostrar('1');"></i>
             	</div>
             	<div class="col-12 text-center mt-3 mb-1">
-                	<button type="button" class="btn btn-primary" onclick="iniciarSesion()">Iniciar Sesión</button>
+                	<button type="button" class="btn btn-primary" onclick="login()">Iniciar Sesión</button>
             	</div>
                 <div class="col-12 text-center">
                     <button type="button" class="btn btn-link" data-toggle="modal" data-target="#exampleModal">
-                        Olvide la contraseña
+                        Olvide mi usuario y/o contraseña
                     </button>
                 </div>
             </div>
@@ -66,11 +66,11 @@
                         <h5>Ingrese su Cédula Profesional para buscar su cuenta:</h5>                        
                         <div class="row">
                             <div class="col-12">
-                                <input type="text" class="form-control" placeholder="Numero de cédula" id="cedpro">
+                                <input type="number" class="form-control" placeholder="Numero de cédula" id="cedpro">
                             </div>
                             <div class="col-12 mt-2">
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-                                <button type="button" class="btn btn-primary" data-dismiss="modal">Aceptar</button>
+                                <button type="button" class="btn btn-link" onclick="msj()">Ya me enviaron el mensaje al correo</button>
+                                <button type="button" class="btn btn-primary" onclick="cedula()">Aceptar</button>
                             </div>
                         </div>
                     </div>
@@ -80,4 +80,46 @@
     </div>
 </div>
 
+<div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Nueva Contraseña</h5>
+                <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row">                                           
+                        <div class="col-12 text-center mt-3">
+                            <h5>Ingrese su nombre de usuario:</h5>                        
+                        <div class="col-12 text-center contain">
+                            <input type="text" class="form-control" id="user">                                              
+                        </div>
+                        <h5>Ingrese la contraseña enviada a su correo:</h5>                        
+                        <div class="col-12 text-center contain">
+                            <input type="password" class="form-control" id="cont2">                    
+                            <i class="icon ion-md-eye ico" id="Eye2" onclick="mostrar('2')"></i>
+                        </div>  
+                        <h5>Ingrese una nueva contraseña:</h5>                        
+                        <div class="col-12 text-center contain">
+                            <input type="password" class="form-control" id="cont3">                    
+                            <i class="icon ion-md-eye ico" id="Eye3" onclick="mostrar('3')"></i>
+                        </div>  
+                        <h5>Ingrese la otra vez la nueva contraseña:</h5>                        
+                        <div class="col-12 text-center contain">
+                            <input type="password" class="form-control" id="cont4">                    
+                            <i class="icon ion-md-eye ico" id="Eye4" onclick="mostrar('4')"></i>
+                        </div>                          
+                        <div class="row">                            
+                            <div class="col-12 mt-2">
+                                <button type="button" class="btn btn-secondary" onclick="cancelar()">Cancelar</button>
+                                <button type="button" class="btn btn-primary" onclick="login2()">Aceptar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 </html>

@@ -61,7 +61,7 @@ if($nombre == null || $nombre == ''){
             	</div>
             	<div class="col-12 text-center contain">
                 	<input type="password" placeholder="Nueva Contraseña" class="form-control passw" id="cont1">
-                  <i class="icon2 ion-md-eye ico" id="Eye1" onclick="mostrar1();"></i>
+                  <i class="icon2 ion-md-eye ico" id="Eye1" onclick="mostrar('1');"></i>
             	</div>
 
               <div class="col-12 text-center mt-3">
@@ -69,14 +69,14 @@ if($nombre == null || $nombre == ''){
             	</div>
             	<div class="col-12 text-center contain ">
                 	<input type="password"  placeholder="Volver a escribir contraseña nueva" class="form-control passw" id="cont2">
-                  <i class="icon2 ion-md-eye ico" id="Eye2" onclick="mostrar2();"></i>
+                  <i class="icon2 ion-md-eye ico" id="Eye2" onclick="mostrar('2');"></i>
             	</div>
               <div class="col-12 text-center mt-3">
                 	<h5>Introduzca su contraseña para guardar estos cambios:</h5>
             	</div>
             	<div class="col-12 text-center contain">
                 	<input type="password" placeholder="Contraseña actual" class="form-control passw" id="cont3">
-                  <i class="icon2 ion-md-eye ico" id="Eye" onclick="mostrar3();"></i>
+                  <i class="icon2 ion-md-eye ico" id="Eye3" onclick="mostrar('3');"></i>
             	</div>
             	<div class="col-12 text-center mt-3 mb-1">
                 	<button type="button" class="btn btn-primary" onclick="udl()">Guardar Cambios</button>
