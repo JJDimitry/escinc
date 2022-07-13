@@ -7,7 +7,7 @@ $tipoUsuario = $_SESSION['TipoUsuario'];
 $img=$_SESSION['img'];     
 
 if($nombre == null || $nombre == ''){
-	header("location:../../");
+	header("location:../");
     session_destroy();  
 }
 ?>
