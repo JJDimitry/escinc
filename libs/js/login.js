@@ -27,9 +27,10 @@ function cedula(){
 
 function msj(){
     $('#exampleModal').modal('hide')        
-    $('#exampleModal2').modal()    
+    $('#exampleModal2').modal('show')    
     $('#cedpro').val(null)
 }
+
 function cancelar(){
     $('#user').val(null)
     $('#cont2').val(null)
@@ -85,11 +86,11 @@ function ajax(parametros){
         success: function(resp) {                 
             if(resp=="")
             alert("usuario o contraseña incorrectos.");                                
-            else if (resp == 'ADMIN') {                    
+            else if (resp == 'ADMINISTRADOR') {                    
               location.href = 'Principal/admin/inicio.php'                  
-            } else if(resp == 'DIRPOP' || resp == 'DIRPART' || resp == 'DIREXT'){                                        
+            } else if(resp == 'DIRECTOR POPULAR' || resp == 'DIRECTOR PARTICULAR' || resp == 'DIRECTOR EXTERNO'){                                        
                 location.href = 'Principal/directores/inicio.php'
-            } else if(resp == 'DOCPOP' || resp == 'DOCPART' || resp == 'DOCEXT'){                                         
+            } else if(resp == 'DOCENTE POPULAR' || resp == 'DOCENTE PARTICULAR' || resp == 'DOCENTE EXTERNO'){                                         
                 location.href = 'Principal/docentes/inicio.php'
             }else{
                 $('.campovacio').addClass('d-none')

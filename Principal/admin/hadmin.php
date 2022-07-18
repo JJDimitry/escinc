@@ -45,8 +45,9 @@ else if($tipoUsuario == 'DOCPOP' || $tipoUsuario == 'DOCPART' || $tipoUsuario ==
       
       <div class="menu">
         <a href="inicio.php" class="d-block text-light p-2"><i class="icon ion-md-home lead"></i>&nbsp;&nbsp; Inicio</a>
+        <a href="cusuarios.php" class="d-block text-light p-2"><i class="icon ion-md-people lead"></i>&nbsp;&nbsp; Control de Usuarios</a>
         <a href="directorios.php" class="d-block text-light p-2"><i class="icon ion-md-albums lead"></i>&nbsp;&nbsp; Directorios</a>
-        <a href="supervision.php" class="d-block text-light p-2"><i class="icon ion-md-people lead"></i>&nbsp;&nbsp; Formato 1 de Supervisión</a>
+        <a href="supervision.php" class="d-block text-light p-2"><i class="icon ion-md-switch lead"></i>&nbsp;&nbsp; Formato 1 de Supervisión</a>
         <a href="pddocente.php" class="d-block text-light p-2"><i class="icon ion-md-today lead"></i>&nbsp;&nbsp; Plantilla Directivo Docente</a>
         <a href="aincorp.php" class="d-block text-light p-2"><i class="icon ion-md-list lead"></i></i>&nbsp;&nbsp; Acuerdos de incorporación</a>
         <a href="horarios.php" class="d-block text-light p-2"><i class="icon ion-md-paper lead"></i>&nbsp;&nbsp; Horarios</a>        

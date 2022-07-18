@@ -79,16 +79,10 @@ background: rgb(248, 248, 255);
     cursor: pointer; 
 }
 	
-	.tabla td { 
-		padding: 2px; 
-		border: solid 1px rgb(0, 0, 0); 
-		color: #000000; 
-		text-align:center;
-	}
-	.tabla th { 
-		padding: 4px 2px;	  
-		background-color: #3786fc;
-		border-left: solid 1px #000000; 
-	}
-	.tabla tbody tr:nth-child(odd)		{ background-color:rgb(190, 190, 190); }
-	.tabla tbody tr:nth-child(even)		{ background-color:rgb(255, 255, 255); }
+.f25{
+	font-size: 25px;
+  }
+
+  .table-hover tbody tr:hover{	
+   background-color: rgb(149, 198, 252);
+  }

@@ -1,10 +1,8 @@
 <?php      
-$id=$_POST['id'];
+$consulta=$_POST['consulta'];
 
 require 'conn.php';
 mysqli_set_charset($conexion,"utf8");
-
-$consulta = "SELECT * FROM secd WHERE idusuario = '$id'";
 
 $result = $conexion->query($consulta); 
    if($result->num_rows >0){

@@ -82,24 +82,24 @@ function sdidact(base64){
     } 
 }
 
-
 function datos(){    
-    var id = $('#ID').val();    
+    var id = $('#ID').val();
+    var consulta = "SELECT * FROM secd WHERE idusuario = '" + id + "'";  
     $.ajax({        
         method: 'POST',
-        url: '../../libs/db/tsd.php',                       
-        data: {"id":id},
+        url: '../../libs/db/tid.php',                       
+        data: {"consulta":consulta},
         success: function(resp) { 
             if(resp != "vacio"){
                 var cons = JSON.parse(resp);        
                 for(var i=0; i <cons.length; i++)
                 {
                     var n= "<tr>" +
-                       "<td tittle>" + cons[i].ID + "</td>" +
-                       "<td>" + cons[i].npdf + "</td>" +
-                       "<td>" + cons[i].fecha + "</td>" +
-                       "<td><i title='Visualizar' class='icon ion-md-today selec' id=" + cons[i].ID + " onclick='ver(this.id)'></i>" + 
-                       "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i title='Borrar' class='icon ion-md-trash selec' id=" + cons[i].ID + " onclick='del(this.id)'></i></td></tr>"; 
+                       "<td tittle class='align-middle'>" + cons[i].ID + "</td>" +
+                       "<td class='align-middle'>" + cons[i].npdf + "</td>" +
+                       "<td class='align-middle'>" + cons[i].fecha + "</td>" +
+                       "<td><i title='Visualizar' class='icon f25 ion-md-today selec' id=" + cons[i].ID + " onclick='ver(this.id)'></i>" + 
+                       "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i title='Borrar' class='icon f25 ion-md-trash selec' id=" + cons[i].ID + " onclick='del(this.id)'></i></td></tr>"; 
                        $(n).appendTo("#result");
                 }                
             }
@@ -107,6 +107,36 @@ function datos(){
     });
 }
 
+function datos2(){    
+    var id = $('#ID').val();
+    var consulta =  "SELECT lusuario.TipoUsuario, usuario.* " +  
+                    "FROM lusuario " +   
+                    "INNER JOIN usuario " +   
+                    "ON lusuario.Idusuario = usuario.ID " +
+                    "WHERE usuario.ID != " + id;    
+    $.ajax({        
+        method: 'POST',
+        url: '../../libs/db/tid.php',                       
+        data: {"consulta":consulta},
+        success: function(resp) { 
+            if(resp != "vacio"){
+                var cons = JSON.parse(resp);        
+                for(var i=0; i <cons.length; i++)
+                {                    
+                    var n= "<tr>" +
+                       "<td tittle class='align-middle'>" + cons[i].Ncedprof + "</td>" +
+                       "<td class='align-middle'>" + cons[i].Nombre + " " + cons[i].Apellidos + "</td>" +
+                       "<td class='align-middle'>" + cons[i].Pacad + "</td>" +
+                       "<td class='align-middle'>" + cons[i].CURP + "</td>" +
+                       "<td class='align-middle'>" + cons[i].TipoUsuario + "</td>" +
+                       "<td class='align-middle'><i title='Visualizar' class='icon f25 ion-md-today selec' id=" + cons[i].ID + " onclick='ver(this.id)'></i>" + 
+                       "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i title='Borrar' class='icon f25 ion-md-trash selec' id=" + cons[i].ID + " onclick='del2(this.id)'></i></td></tr>"; 
+                       $(n).appendTo("#result");                    
+                }                
+            }
+        }
+    });
+}
 
 function ver(id){
     $.ajax({

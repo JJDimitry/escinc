@@ -9,9 +9,9 @@
     <input class="form-control" type="file" name="apdf" id="pdf" accept=".pdf">
     <div class="col-12 text-center mt-3 mb-1">
       <button type="button" class="btn btn-primary" onclick="subirpdf()">Subir Archivo</button>
-    </div>
-    <table class="tabla">            
-      <thead>
+    </div>    
+    <table class="table table-striped table-responsive table-hover">            
+      <thead class= "table-dark">
         <th>ID de archivo</th>
         <th>Nombre de Archivo</th>
         <th>Fecha de subida</th>
