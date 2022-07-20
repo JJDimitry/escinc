@@ -5,8 +5,8 @@ function login() {
     if (usuario.length > 0 && contrasena.length > 0) { 
         contrasena = hex_md5(contrasena)               
         var parametros = {
-            "USUARIO": usuario,
-            "CONTRASENA": contrasena
+            "usuario": usuario,
+            "contrasena": contrasena
         }
         ajax(parametros)
     }
@@ -78,16 +78,16 @@ $("#cont1").keypress(function(e) {
     }
  })
  
-function ajax(parametros){
+function ajax(parametros){    
     $.ajax({
         method: 'POST',
         url: 'libs/db/login.php',
         data: parametros,
-        success: function(resp) {                 
+        success: function(resp) {                                     
             if(resp=="")
             alert("usuario o contraseña incorrectos.");                                
             else if (resp == 'ADMINISTRADOR') {                    
-              location.href = 'Principal/admin/inicio.php'                  
+                location.href = 'Principal/admin/inicio.php'                  
             } else if(resp == 'DIRECTOR POPULAR' || resp == 'DIRECTOR PARTICULAR' || resp == 'DIRECTOR EXTERNO'){                                        
                 location.href = 'Principal/directores/inicio.php'
             } else if(resp == 'DOCENTE POPULAR' || resp == 'DOCENTE PARTICULAR' || resp == 'DOCENTE EXTERNO'){                                         

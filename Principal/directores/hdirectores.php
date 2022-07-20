@@ -1,7 +1,7 @@
 <?php
 session_start();
 error_reporting(0);
-$id=$_SESSION['ID'];
+$idusuario=$_SESSION['idusuario'];
 $nombre=$_SESSION['Nombre'];
 $tipoUsuario = $_SESSION['TipoUsuario'];
 $img=$_SESSION['img'];     
@@ -10,9 +10,9 @@ if($nombre == null || $nombre == ''){
 	header("location:../../");
     session_destroy();
 }
-else if($tipoUsuario == 'ADMIN')
+else if($tipoUsuario == 'ADMINISTRADOR')
   header("location:../admin/inicio.php");
-else if($tipoUsuario == 'DOCPOP' || $tipoUsuario == 'DOCPART' || $tipoUsuario == 'DOCEXT')
+  else if($tipoUsuario == 'DOCENTE POPULAR' || $tipoUsuario == 'DOCENTE PARTICULAR' || $tipoUsuario == 'DOCENTE EXTERNO')
   header("location:../docentes/inicio.php");
 ?>
 
@@ -33,7 +33,7 @@ else if($tipoUsuario == 'DOCPOP' || $tipoUsuario == 'DOCPART' || $tipoUsuario ==
 	<script src="../../libs/js/bootstrap/bootstrap.min.js"></script>
   <script src="../../libs/js/functions.js"></script>
   
-  <input type="hidden" id="ID" value="<?php echo $id;?>">
+  <input type="hidden" id="idusuario" value="<?php echo $idusuario;?>">
   <input type="hidden" id="nombre" value="<?php echo $nombre;?>">
   <input type="hidden" id="imagen" value="<?php echo $img;?>">
   <div class="d-flex">

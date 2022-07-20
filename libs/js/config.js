@@ -20,11 +20,11 @@ function cargarimg(){
 
 function datos(){
     cargarimg();
-    var id = $('#ID').val();
+    var idusuario = $('#idusuario').val();
     var nombre = $('#nombre').val();       
-    fn='2018-03-08'
+    fn=""
     var parametros = {
-        "id": id,
+        "idusuario": idusuario,
         "nombre": nombre
     }; 
     $.ajax({
@@ -48,13 +48,12 @@ function datos(){
 }
 
 function udl(){
-    var id = $('#ID').val();
+    var idusuario = $('#idusuario').val();
     var pswd0 = $('#x').val();
     var pswd3 = hex_md5($('#cont3').val());  
     var pswd2 = $('#cont2').val();  
     var pswd1 = $('#cont1').val();    
-    var user = $('#usuario').val().toUpperCase();    
-    alert(user);
+    var user = $('#usuario').val().toUpperCase();        
     var img = $('#base64').text();
     var i = 0;
     if(pswd0 != pswd3){
@@ -78,7 +77,7 @@ function udl(){
 
     if(i==1){                
         var parametros = {
-            "id": id,
+            "idusuario": idusuario,
             "user": user,
             "pswd": pswd1,
             "img": img
@@ -89,6 +88,12 @@ function udl(){
             data: parametros,
             success: function(resp) {
                 alert(resp);
+                if(resp == "Datos actualizados."){
+                $('#cont3').val(null);  
+                $('#cont2').val(null);  
+                $('#cont1').val(null);  
+
+                }
             }
         });
     }
@@ -97,7 +102,7 @@ function udl(){
 function udu(){    
     let fecha = new Date();
     dato = fecha.getFullYear();
-    var id = $('#ID').val();
+    var idusuario = $('#idusuario').val();
     var nombre = $('#name').val();
     var apellidos = $('#apellidos').val();
     var fnac = $('#fnac').val();
@@ -123,7 +128,7 @@ function udu(){
         alert("Favor de poner un numero telefonico a 10 digitos o un numero valido.");
     else{
         var parametros = {
-            "id": id,
+            "idusuario": idusuario,
             "nombre": nombre,
             "apellidos": apellidos,
             "fnac": fnac,
@@ -156,11 +161,11 @@ function verificar(gmail){
 
 function volver(){
     tu=$('#tu').val();
-    if (tu == "ADMIN")
+    if (tu == "ADMINISTRADOR")
         location.href = '../Principal/admin/inicio.php';
-    if (tu == 'DIRPOP' || tu == 'DIRPART' || tu == 'DIREXT')
+    if (tu == 'DIRECTOR POPULAR' || tu == 'DIRECTOR PARTICULAR' || tu == 'DIRECTOR EXTERNO')
         location.href = '../Principal/directores/inicio.php';
-    if (tu == 'DOCPOP' || tu == 'DOCPART' || tu == 'DOCEXT')
+    if (tu == 'DOCENTE POPULAR' || tu == 'DOCENTE PARTICULAR' || tu == 'DOCENTE EXTERNO')
         location.href = '../Principal/docentes/inicio.php';
 }
 

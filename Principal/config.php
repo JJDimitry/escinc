@@ -1,7 +1,7 @@
 <?php
 session_start();
 error_reporting(0);
-$id=$_SESSION['ID'];
+$idusuario=$_SESSION['idusuario'];
 $nombre=$_SESSION['Nombre'];
 $tipoUsuario = $_SESSION['TipoUsuario'];
 $img=$_SESSION['img'];     
@@ -31,7 +31,7 @@ if($nombre == null || $nombre == ''){
     <script src="../libs/js/md5.js"></script>
     
     <title>Perfil</title>
-    <input type="hidden" id="ID" value="<?php echo $id;?>">
+    <input type="hidden" id="idusuario" value="<?php echo $idusuario;?>">
     <input type="hidden" id="nombre" value="<?php echo $nombre;?>">
     <input type="hidden" id="imagen" value="<?php echo $img;?>">
     <input type="hidden" id="tu" value="<?php echo $tipoUsuario;?>">
@@ -67,7 +67,7 @@ if($nombre == null || $nombre == ''){
               <div class="col-12 text-center mt-3">
                 	<h5>Vuelva a escribir la contraseña:</h5>
             	</div>
-            	<div class="col-12 text-center contain ">
+            	<div class="col-12 text-center contain">
                 	<input type="password"  placeholder="Volver a escribir contraseña nueva" class="form-control passw" id="cont2">
                   <i class="icon2 ion-md-eye ico" id="Eye2" onclick="mostrar('2');"></i>
             	</div>

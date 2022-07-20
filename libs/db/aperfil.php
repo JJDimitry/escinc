@@ -1,11 +1,11 @@
 <?php    
 require 'conn.php';
-$id=$_POST['id'];
+$idusuario=$_POST['idusuario'];
 $nombre=$_POST['nombre'];
 $sql="SELECT usuario.Nombre, usuario.Apellidos, usuario.Fnac, usuario.Dir, usuario.Tel, usuario.Email,
                 lusuario.NUsuario, lusuario.Contrasena
             FROM usuario, lusuario 
-            WHERE lusuario.ID = '$id' AND lusuario.ID = usuario.ID AND lusuario.Estado = 1";
+            WHERE lusuario.idusuario = '$idusuario' AND lusuario.idusuario = usuario.ID AND lusuario.Estado = 1";
    mysqli_set_charset($conexion,"utf8");
    $result = $conexion->query($sql); 
    if($result->num_rows >0){

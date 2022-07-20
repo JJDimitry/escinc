@@ -1,5 +1,5 @@
 <?php
-$id=$_POST['id'];
+$idusuario=$_POST['idusuario'];
 $dato=$_POST['dato'];
 $npdf=$_POST['npdf'];
 $base64=$_POST['base64'];
@@ -8,7 +8,7 @@ require 'conn.php';
 mysqli_set_charset($conexion,"utf8");
 
 $consulta = "INSERT INTO secd (idusuario, fecha, npdf, pdf)
-             VALUES ('$id', '$dato', '$npdf', '$base64')";
+             VALUES ('$idusuario', '$dato', '$npdf', '$base64')";
 
 if($conexion->query($consulta)){
     $resp ='PDF Subido.';	

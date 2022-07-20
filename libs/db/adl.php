@@ -1,5 +1,5 @@
 <?php
-$id=$_POST['id'];
+$idusuario=$_POST['idusuario'];
 $user=$_POST['user'];
 $pswd=$_POST['pswd'];
 $img=$_POST['img'];
@@ -19,11 +19,12 @@ if($pswd != "" && $img != "")
 require 'conn.php';
 mysqli_set_charset($conexion,"utf8");
 $consulta = "UPDATE lusuario SET $user $pswd $img
-             WHERE ID = '$id'";
+             WHERE idusuario = '$idusuario'";
 
 if($conexion->query($consulta)){
 	session_start();
-    $_SESSION['img']=$ip;
+    if($img != "")
+        $_SESSION['img']=$ip;
     $resp ='Datos actualizados.';	
 }
 else{

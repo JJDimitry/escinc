@@ -32,3 +32,7 @@ body {
 .icon:hover{
 	opacity: 0.8;
 }
+
+input::-ms-reveal {
+    display: none;
+}

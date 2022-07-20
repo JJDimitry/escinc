@@ -1,5 +1,5 @@
 <?php
-$id=$_POST['id'];
+$idusuario=$_POST['idusuario'];
 $nombre=$_POST['nombre'];
 $apellidos=$_POST['apellidos'];
 $fnac=$_POST['fnac'];
@@ -11,7 +11,7 @@ require 'conn.php';
 mysqli_set_charset($conexion,"utf8");
 $consulta = "UPDATE usuario 
              SET Nombre='$nombre', Apellidos='$apellidos', Fnac='$fnac', Dir='$dir', Tel='$tel', Email='$gmail'
-             WHERE ID = '$id'";
+             WHERE ID = '$idusuario'";
 
 if($conexion->query($consulta)){
 	session_start();
