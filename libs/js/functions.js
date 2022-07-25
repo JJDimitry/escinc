@@ -259,9 +259,18 @@ function ver(id){
         method: 'POST',
         url: '../../libs/db/vpdf.php',
         data: {"id":id},
-        success: function(resp) {
-            let pdfWindow = window.open();
-            pdfWindow.document.write( "<iframe width='100%' height='100%' src='" + resp +"'></iframe>" )
+        success: function(resp) {                   
+            var resp2 = resp.slice(28)
+
+            var byteCharacters = atob(resp2);
+            var byteNumbers = new Array(byteCharacters.length);
+            for (var i = 0; i < byteCharacters.length; i++) {
+                byteNumbers[i] = byteCharacters.charCodeAt(i);
+            }
+            var byteArray = new Uint8Array(byteNumbers);
+            var file = new Blob([byteArray], { type: 'application/pdf;base64' });
+            var fileURL = URL.createObjectURL(file);                        
+            window.open(fileURL);            
         }
     });
 }
