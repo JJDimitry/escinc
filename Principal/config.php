@@ -38,93 +38,82 @@ if($nombre == null || $nombre == ''){
     <input type="hidden" id="x">
   </head>
 
-  <body onload="datos()">
-  <div class= "container">
-    <div class="left">
-    <div class="col-12 text-center mt-3 mb-2">            
-      <img id="perfil" class='img-fluid rounded-circle'>
-    </div>
-    <div class="col-12 text-center">
-      <button type="button" class="btn btn-link" data-toggle="modal" data-target="#exampleModal">
-      Cambiar Imagen
-      </button>
-    </div>
-  
-    <div class="col-12 text-center mt-4">
-                    <h5>Nombre de usuario:</h5>
-                </div>
-                <div class="col-12 text-center">
-                	<input type="text" class="form-control" id="usuario">
-            	</div>
-            	<div class="col-12 text-center mt-3">
-                	<h5>Cambiar contraseña:</h5>                                    
-            	</div>
-            	<div class="col-12 text-center contain">
-                	<input type="password" placeholder="Nueva Contraseña" class="form-control passw" id="cont1">
-                  <i class="icon2 ion-md-eye ico" id="Eye1" onclick="mostrar('1');"></i>
-            	</div>
+  <body onload="datos()" class="fondo">
+    <div class="container">
+      <div class="left">
+        <div class="col-12 text-center mt-2 mb-1">            
+          <img id="perfil" class='img-fluid rounded-circle'>
+        </div>
+        <div class="col-12 text-center">
+          <button type="button" class="btn btn-link" data-toggle="modal" data-target="#exampleModal">
+            Cambiar Imagen
+          </button>
+        </div>
+        <div class="med">
+        <div class="col-12 mt-4">
+          <h6>Nombre de usuario:</h6>
+          <input type="text" class="form-control" id="usuario">
+        </div>       
+        <div class="col-8 mt-3">
+          <h6>Cambiar contraseña:</h6>                                        
+        </div>
+        <div class="col-12 contain">
+          <input type="password" placeholder="Nueva Contraseña" class="form-control passw" id="cont1">
+          <i class="icon2 ion-md-eye ico" id="Eye1" onclick="mostrar('1');"></i>      
+        </div>
+        <div class="col-12 mt-3">
+          <h6>Vuelva a escribir la contraseña:</h6>          
+        </div>
+        <div class="col-12 contain">
+          <input type="password"  placeholder="Volver a escribir contraseña nueva" class="form-control passw" id="cont2">
+          <i class="icon2 ion-md-eye ico" id="Eye2" onclick="mostrar('2');"></i>
+        </div>
+        <div class="col-12 mt-3">
+          <h6>Contraseña actual para guardar:</h6>          
+        </div>
+        <div class="col-12 contain">
+          <input type="password" placeholder="Contraseña actual" class="form-control passw" id="cont3">
+          <i class="icon2 ion-md-eye ico" id="Eye3" onclick="mostrar('3');"></i>
+          </div>
+          </div>
+        <div class="col-12 text-center mt-3 mb-1">
+          <button type="button" class="btn btn-primary" onclick="udl()">Guardar Cambios</button>
+        </div>
+      </div>
 
-              <div class="col-12 text-center mt-3">
-                	<h5>Vuelva a escribir la contraseña:</h5>
-            	</div>
-            	<div class="col-12 text-center contain">
-                	<input type="password"  placeholder="Volver a escribir contraseña nueva" class="form-control passw" id="cont2">
-                  <i class="icon2 ion-md-eye ico" id="Eye2" onclick="mostrar('2');"></i>
-            	</div>
-              <div class="col-12 text-center mt-3">
-                	<h5>Introduzca su contraseña para guardar estos cambios:</h5>
-            	</div>
-            	<div class="col-12 text-center contain">
-                	<input type="password" placeholder="Contraseña actual" class="form-control passw" id="cont3">
-                  <i class="icon2 ion-md-eye ico" id="Eye3" onclick="mostrar('3');"></i>
-            	</div>
-            	<div class="col-12 text-center mt-3 mb-1">
-                	<button type="button" class="btn btn-primary" onclick="udl()">Guardar Cambios</button>
-            	</div>
-  </div>
-  <div class="right">
-  <div class="col-12 text-center mt-4">
-                    <h5>Nombre's:</h5>
-                </div>
-                <div class="col-12 text-center">
-                	<input type="text" class="form-control" id="name">
-            	</div>
-              <div class="col-12 text-center mt-4">
-                    <h5>Apellido's:</h5>
-                </div>
-                <div class="col-12 text-center">
-                	<input type="text" class="form-control" id="apellidos">
-            	</div>
-              <div class="col-12 text-center mt-4">
-                    <h5>Fecha de Nacimiento:</h5>
-                </div>
-                <div class="col-12 text-center">
-                	<input type="date" class="form-control" id="fnac">                  
-            	</div>
-              <div class="col-12 text-center mt-4">
-                    <h5>Dirección:</h5>
-                </div>
-                <div class="col-12 text-center">
-                	<input type="text" class="form-control" id="direccion">
-            	</div>
-              <div class="col-12 text-center mt-4">
-                    <h5>Numero Telefónico:</h5>
-                </div>
-                <div class="col-12 text-center">
-                	<input type="number" class="form-control" id="tel">
-            	</div>
-              <div class="col-12 text-center mt-4">
-                    <h5>Gmail:</h5>
-                </div>
-                <div class="col-12 text-center">
-                	<input type="text" class="form-control" id="gmail">
-            	</div>
-              <div class="col-12 text-center mt-3 mb-1">
-                <button type="button" class="btn btn-primary" onclick="volver()">Volver</button>
-                <button type="button" class="btn btn-primary" onclick="udu()">Guardar Cambios</button>
-            	</div>
-  </div>
-  </div>
+      <div class="right">
+      <div class="med2">
+        <div class="col-12 mt-4">
+          <h6>Nombre's:</h6>
+          <input type="text" class="form-control" id="name">
+        </div>       
+        <div class="col-12 mt-4">
+          <h6>Apellido's:</h6>
+          <input type="text" class="form-control" id="apellidos">
+        </div>
+        <div class="col-12 mt-4">
+          <h6>Fecha de Nacimiento:</h6>
+          <input type="date" class="form-control" id="fnac">
+        </div>
+        <div class="col-12 mt-4">
+          <h6>Dirección:</h6>
+          <input type="text" class="form-control" id="direccion">
+        </div>
+        <div class="col-12 mt-4">
+          <h6>Numero Telefónico:</h6>
+          <input type="number" class="form-control" id="tel">
+        </div>
+        <div class="col-12 mt-4">
+          <h6>Gmail:</h6>
+          <input type="text" class="form-control" id="gmail">
+        </div>       
+        <div class="col-12 text-center mt-3 mb-1">
+            <button type="button" class="btn btn-primary" onclick="volver()">Volver</button>
+            <button type="button" class="btn btn-primary" onclick="udu()">Guardar Cambios</button>
+        </div>
+      </div>
+      </div>
+    </div>
   </body>
 
 

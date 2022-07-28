@@ -36,6 +36,8 @@ else if($tipoUsuario == 'ADMINISTRADOR')
   <input type="hidden" id="idusuario" value="<?php echo $idusuario;?>">
   <input type="hidden" id="nombre" value="<?php echo $nombre;?>">
   <input type="hidden" id="imagen" value="<?php echo $img;?>">
+  
+ 
   <div class="d-flex">
     <div id="sidebar-container" class="bg-primary">
       <div class="logo">

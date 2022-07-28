@@ -73,7 +73,7 @@ else if($tipoUsuario == 'DOCENTE POPULAR' || $tipoUsuario == 'DOCENTE PARTICULAR
           </button>
           <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav ms-auto">
-              <li class="nav-item dropdown ms-auto">                                  
+              <li class="nav-item dropdown ms-auto">                                               
                 <p id="user" class="nav-link dropdown-toggle " href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false"></p>                                                                                 
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                   <li><a href="../config.php" class="btn btn-link">Configuración</a></li>

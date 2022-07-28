@@ -1,3 +1,10 @@
+.fondo{
+    margin: 0;
+    padding: 0;
+    background-image: url("../img/edificios.png");
+    background-size: auto;
+    background-position: center;
+}
 .avatar{
 	max-width: 50px;
 }
@@ -39,7 +46,7 @@ background: rgb(248, 248, 255);
 
 .derecha{
 	top: 15%;
-	left: 18%;
+	left: 16rem;
 	position: absolute;
 }
 
@@ -89,4 +96,14 @@ background: rgb(248, 248, 255);
 
   input::-ms-reveal {
     display: none;
+}
+
+.med{		
+	width: 80%;
+	margin: 0 auto;
+}
+
+.med2{			
+	width: 90%;
+	margin: 0 auto;
 }

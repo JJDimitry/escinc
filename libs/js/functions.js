@@ -20,6 +20,9 @@ function user(){
     image.src = imagen;                          
     foto.setAttribute("src", imagen);
 }
+function adm(){
+    
+}
 
 function DestruirSesion()
 {
