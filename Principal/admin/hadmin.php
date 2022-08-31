@@ -46,6 +46,7 @@ else if($tipoUsuario == 'DOCENTE POPULAR' || $tipoUsuario == 'DOCENTE PARTICULAR
       
       <div class="menu stat">
         <a href="inicio.php" class="d-block text-light p-2"><i class="icon ion-md-home lead"></i>&nbsp;&nbsp; Inicio</a>
+        <a href="sdidactica.php" class="d-block text-light p-2"><i class="icon ion-md-paper lead"></i>&nbsp;&nbsp; Secuencia Didáctica</a>                
         <a href="cusuarios.php" class="d-block text-light p-2"><i class="icon ion-md-people lead"></i>&nbsp;&nbsp; Control de Usuarios</a>
         <a href="directorios.php" class="d-block text-light p-2"><i class="icon ion-md-albums lead"></i>&nbsp;&nbsp; Directorios</a>
         <a href="supervision.php" class="d-block text-light p-2"><i class="icon ion-md-switch lead"></i>&nbsp;&nbsp; Formato 1 de Supervisión</a>

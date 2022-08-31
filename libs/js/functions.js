@@ -93,13 +93,15 @@ function datos(){
             if(resp != "vacio"){
                 var cons = JSON.parse(resp);        
                 for(var i=0; i <cons.length; i++)
-                {
-                    var n= "<tr>" +
+                {                    
+                       var n= "<tr>" +
                        "<td tittle class='align-middle'>" + cons[i].ID + "</td>" +
                        "<td class='align-middle'>" + cons[i].npdf + "</td>" +
                        "<td class='align-middle'>" + cons[i].fecha + "</td>" +
-                       "<td><i title='Visualizar' class='icon f25 ion-md-today selec ii"+ cons[i].ID +"' id=" + cons[i].ID + "' onclick='ver(this.id)'></i>" + 
-                       "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i title='Borrar' class='icon f25 ion-md-trash selec ii"+ cons[i].ID +"' id=" + cons[i].ID + " onclick='del(this.id)'></i><div class='row justify-content-center text-center mt-2'><div class='col-12'><div class='alert alert-danger gnv"+ cons[i].ID +" d-none' role='alert'>Archivo borrado.</div></div></div></td></tr>"; 
+                       "<td><i title='Visualizar' class='icon f25 ion-md-today selec ii"+ cons[i].ID +"' id=" + cons[i].ID + " onclick='ver(this.id)'></i>" + 
+                       "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i title='Borrar' class='icon f25 ion-md-trash selec ii"+ cons[i].ID +
+                       "' id=" + cons[i].ID + " onclick='del(this.id)'></i><div class='row justify-content-center text-center mt-2'><div class='col-12'>" +
+                       "<div class='alert alert-danger gnv"+ cons[i].ID +" d-none' role='alert'>Archivo borrado.</div></div></div></td></tr>"; 
                        $(n).appendTo("#result");
                 }                
             }
@@ -137,7 +139,38 @@ function datos2(){
     });
 }
 
+function datos3(){        
+    var consulta = "SELECT * FROM secd";  
+    $.ajax({        
+        method: 'POST',
+        url: '../../libs/db/tid3.php',                       
+        data: {"consulta":consulta},
+        success: function(resp) {                                   
+            if(resp != "vacio"){
+                var cons = JSON.parse(resp);        
+                for(var i=0; i <cons.length; i++)
+                {                    
+                    var n= "<tr>" +
+                       "<td tittle class='align-middle'>" + cons[i].ID + "</td>" +
+                       "<td class='align-middle'>" + cons[i].Ncedprof + "</td>" +
+                       "<td class='align-middle'>" + cons[i].Gacad + " " + cons[i].Nombre + "</td>" +
+                       "<td class='align-middle'>" + cons[i].npdf + "</td>" +
+                       "<td class='align-middle'>" + cons[i].fecha + "</td>" +
+                       "<td><i title='Visualizar' class='icon f25 ion-md-today selec ii"+ cons[i].ID +"' id='" + cons[i].ID + 
+                       "' onclick='ver(this.id)'></i>" + 
+                       "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i title='Borrar' class='icon f25 ion-md-trash selec ii"+ cons[i].ID +
+                       "' id='" + cons[i].ID + 
+                       "' onclick='del(this.id)'></i><div class='row justify-content-center text-center mt-2'><div class='col-12'>" +
+                       "<div class='alert alert-danger gnv"+ cons[i].ID +" d-none' role='alert'>Archivo borrado.</div></div></div></td></tr>";                        
+                       $(n).appendTo("#result");
+                }                
+            }
+        }
+    });
+}
+
 function del2(id){    
+    alert(id);
     $.ajax({        
         method: 'POST',
         url: '../../libs/db/deluser.php',                       
@@ -295,7 +328,8 @@ function ver(id){
     });
 }
 
-function del(id){
+
+function del(id){        
     $.ajax({
         method: 'POST',
         url: '../../libs/db/dpdf.php',
