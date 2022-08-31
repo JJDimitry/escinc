@@ -5,8 +5,7 @@
 <div class="derecha">    
     <div class="col-12 text-center mt-3 mb-1">
       <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Crear nuevo usuario</button>
-    </div>
-    
+    </div>    
     <table class="table table-striped table-responsive table-hover">            
       <thead class= "table-dark">
         <th>Cedula profesional</th>

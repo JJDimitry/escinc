@@ -98,8 +98,8 @@ function datos(){
                        "<td tittle class='align-middle'>" + cons[i].ID + "</td>" +
                        "<td class='align-middle'>" + cons[i].npdf + "</td>" +
                        "<td class='align-middle'>" + cons[i].fecha + "</td>" +
-                       "<td><i title='Visualizar' class='icon f25 ion-md-today selec' id=" + cons[i].ID + " onclick='ver(this.id)'></i>" + 
-                       "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i title='Borrar' class='icon f25 ion-md-trash selec' id=" + cons[i].ID + " onclick='del(this.id)'></i></td></tr>"; 
+                       "<td><i title='Visualizar' class='icon f25 ion-md-today selec ii"+ cons[i].ID +"' id=" + cons[i].ID + "' onclick='ver(this.id)'></i>" + 
+                       "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i title='Borrar' class='icon f25 ion-md-trash selec ii"+ cons[i].ID +"' id=" + cons[i].ID + " onclick='del(this.id)'></i><div class='row justify-content-center text-center mt-2'><div class='col-12'><div class='alert alert-danger gnv"+ cons[i].ID +" d-none' role='alert'>Archivo borrado.</div></div></div></td></tr>"; 
                        $(n).appendTo("#result");
                 }                
             }
@@ -129,13 +129,33 @@ function datos2(){
                        "<td class='align-middle'>" + cons[i].Pacad + "</td>" +
                        "<td class='align-middle'>" + cons[i].CURP + "</td>" +
                        "<td class='align-middle'>" + cons[i].TipoUsuario + "</td>" +
-                       "<td class='align-middle'><i title='Visualizar' class='icon f25 ion-md-today selec' id=" + cons[i].ID + " onclick='ver(this.id)'></i>" + 
-                       "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i title='Borrar' class='icon f25 ion-md-trash selec' id=" + cons[i].ID + " onclick='del2(this.id)'></i></td></tr>"; 
+                       "<td class='align-middle'><i title='Borrar' class='row justify-content-center icon f25 ion-md-trash selec ii"+ cons[i].ID +"' id=" + cons[i].ID + " onclick='del2(this.id)'></i><div class='row justify-content-center text-center mt-2'><div class='col-12'><div class='alert alert-danger gnv"+ cons[i].ID +" d-none' role='alert'>Cuenta eliminada.</div></div></div></td></tr>"; 
                        $(n).appendTo("#result");                    
                 }                
             }
         }
     });
+}
+
+function del2(id){    
+    $.ajax({        
+        method: 'POST',
+        url: '../../libs/db/deluser.php',                       
+        data: {"id":id},
+        success: function(resp) {
+            if(resp == "nice") {
+                $('.gnv'+id).removeClass('d-none')
+                $('.ii'+id).addClass('d-none')
+                setTimeout(quitar, 3000) 
+            }
+            else
+            alert(resp);
+        }
+    });
+}
+
+function quitar(){
+    window.location.reload();
 }
 
 function bnu(){
@@ -283,8 +303,9 @@ function del(id){
         success: function(resp) {
             if(resp == 'Archivo borrado')
             {
-                alert(resp);
-                window.location.reload();
+                $('.gnv'+id).removeClass('d-none')
+                $('.ii'+id).addClass('d-none')
+    setTimeout(quitar, 3000)
             }
             else
                 alert(resp);
