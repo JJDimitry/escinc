@@ -1,3 +1,8 @@
+function quitar(){
+    $('.campovacio').addClass('d-none')
+    $('.datoincorrecto').addClass('d-none')
+}
+
 function login() {    
     var usuario = $('#usuario').val()
     var contrasena = $('#cont1').val()
@@ -10,8 +15,9 @@ function login() {
         }
         ajax(parametros)
     }
-    else 
-       alert("favor de rellenar todos los campos.")    
+    else     
+    $('.campovacio').removeClass('d-none')
+    setTimeout(quitar, 4000)    
 }
 
 function cedula(){
@@ -84,17 +90,15 @@ function ajax(parametros){
         url: 'libs/db/login.php',
         data: parametros,
         success: function(resp) {                                     
-            if(resp=="")
-            alert("usuario o contraseña incorrectos.");                                
-            else if (resp == 'ADMINISTRADOR') {                    
+            if (resp == 'ADMINISTRADOR') {                    
                 location.href = 'Principal/admin/inicio.php'                  
             } else if(resp == 'DIRECTOR POPULAR' || resp == 'DIRECTOR PARTICULAR' || resp == 'DIRECTOR EXTERNO'){                                        
                 location.href = 'Principal/directores/inicio.php'
             } else if(resp == 'DOCENTE POPULAR' || resp == 'DOCENTE PARTICULAR' || resp == 'DOCENTE EXTERNO'){                                         
                 location.href = 'Principal/docentes/inicio.php'
-            }else{
-                $('.campovacio').addClass('d-none')
-                $('.datoincorrecto').removeClass('d-none')
+            }else{             
+                $('.datoincorrecto').removeClass('d-none')    
+                setTimeout(quitar, 4000)       
             }
         }
     });

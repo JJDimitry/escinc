@@ -36,14 +36,15 @@ else if($tipoUsuario == 'ADMINISTRADOR')
   <input type="hidden" id="idusuario" value="<?php echo $idusuario;?>">
   <input type="hidden" id="nombre" value="<?php echo $nombre;?>">
   <input type="hidden" id="imagen" value="<?php echo $img;?>">
+
   <div class="d-flex">
     <div id="sidebar-container" class="bg-primary">
       <div class="logo">
-        <img src="../../libs/img/eincr.png" alt="logo" width="150px">
+        <img src="../../libs/img/eincr.png" alt="logo" width="168px">
         <h4 class="text-light font-weight-bold">SASEI-UAGro</h4>
       </div>
       
-      <div class="menu">
+      <div class="menu stat">
         <a href="inicio.php" class="d-block text-light p-2"><i class="icon ion-md-home lead"></i>&nbsp;&nbsp; Inicio</a>
         <a href="dparticular.php" class="d-block text-light p-2"><i class="icon ion-md-albums lead"></i>&nbsp;&nbsp; Directorio Particular</a>
         <a href="supervision.php" class="d-block text-light p-2"><i class="icon ion-md-people lead"></i>&nbsp;&nbsp; Supervisión</a>

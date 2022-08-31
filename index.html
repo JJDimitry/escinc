@@ -37,6 +37,16 @@
             	<div class="col-12 text-center mt-3 mb-1">
                 	<button type="button" class="btn btn-primary" onclick="login()">Iniciar Sesión</button>
             	</div>
+                <div class="row justify-content-center text-center mt-2">
+                    <div class="col-12">
+                        <div class="alert alert-danger datoincorrecto d-none" role="alert">
+                            Usuario y/o contraseña incorrecto
+                        </div>
+                        <div class="alert alert-danger campovacio d-none" role="alert">
+                            Llene todos los campos
+                        </div>
+                    </div>
+                </div>
                 <div class="col-12 text-center">                    
                     <button type="button" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#exampleModal">
                         Olvide mi usuario y/o contraseña

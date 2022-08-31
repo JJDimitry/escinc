@@ -50,6 +50,10 @@ background: rgb(248, 248, 255);
 	position: absolute;
 }
 
+.centro{		
+	padding: 50px;	
+}
+
 .contain{
 	display: flex;
 	justify-content: center;

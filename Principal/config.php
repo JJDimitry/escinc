@@ -50,32 +50,51 @@ if($nombre == null || $nombre == ''){
           </button>
         </div>
         <div class="med">
-        <div class="col-12 mt-4">
-          <h6>Nombre de usuario:</h6>
-          <input type="text" class="form-control" id="usuario">
-        </div>       
-        <div class="col-8 mt-3">
-          <h6>Cambiar contraseña:</h6>                                        
-        </div>
-        <div class="col-12 contain">
-          <input type="password" placeholder="Nueva Contraseña" class="form-control passw" id="cont1">
-          <i class="icon2 ion-md-eye ico" id="Eye1" onclick="mostrar('1');"></i>      
-        </div>
-        <div class="col-12 mt-3">
-          <h6>Vuelva a escribir la contraseña:</h6>          
-        </div>
-        <div class="col-12 contain">
-          <input type="password"  placeholder="Volver a escribir contraseña nueva" class="form-control passw" id="cont2">
-          <i class="icon2 ion-md-eye ico" id="Eye2" onclick="mostrar('2');"></i>
-        </div>
-        <div class="col-12 mt-3">
-          <h6>Contraseña actual para guardar:</h6>          
-        </div>
-        <div class="col-12 contain">
-          <input type="password" placeholder="Contraseña actual" class="form-control passw" id="cont3">
-          <i class="icon2 ion-md-eye ico" id="Eye3" onclick="mostrar('3');"></i>
+          <div class="col-12 mt-4">
+            <h6>Nombre de usuario:</h6>
+            <input type="text" class="form-control" id="usuario">
+          </div>       
+          <div class="col-8 mt-3">
+            <h6>Cambiar contraseña:</h6>                                        
           </div>
+          <div class="col-12 contain">
+            <input type="password" placeholder="Nueva Contraseña" class="form-control passw" id="cont1">
+            <i class="icon2 ion-md-eye ico" id="Eye1" onclick="mostrar('1');"></i>      
           </div>
+          <div class="col-12 mt-3">
+            <h6>Vuelva a escribir la contraseña:</h6>          
+          </div>
+          <div class="col-12 contain">
+            <input type="password"  placeholder="Volver a escribir contraseña nueva" class="form-control passw" id="cont2">
+            <i class="icon2 ion-md-eye ico" id="Eye2" onclick="mostrar('2');"></i>
+          </div>
+          <div class="col-12 mt-3">
+            <h6>Contraseña actual para guardar:</h6>          
+          </div>
+          <div class="col-12 contain">
+            <input type="password" placeholder="Contraseña actual" class="form-control passw" id="cont3">
+            <i class="icon2 ion-md-eye ico" id="Eye3" onclick="mostrar('3');"></i>
+          </div>
+        </div>
+        <div class="row justify-content-center text-center mt-2">
+          <div class="col-12">
+            <div class="alert alert-danger cai d-none" role="alert">
+              Contraseña anterior incorrecta.
+            </div>
+            <div class="alert alert-danger cnc d-none" role="alert">
+              Las contraseñas nuevas no coinciden.
+            </div>
+            <div class="alert alert-danger nuv d-none" role="alert">
+              El nombre de usuario no puede quedar vacio.
+            </div>
+            <div class="alert alert-danger nur d-none" role="alert">
+              Ese nombre de usuario ya se encuentra registrado.
+            </div>
+            <div class="alert alert-success da d-none" role="alert">
+              Datos Actualizados.
+            </div>
+          </div>
+        </div>
         <div class="col-12 text-center mt-3 mb-1">
           <button type="button" class="btn btn-primary" onclick="udl()">Guardar Cambios</button>
         </div>
@@ -106,7 +125,29 @@ if($nombre == null || $nombre == ''){
         <div class="col-12 mt-4">
           <h6>Gmail:</h6>
           <input type="text" class="form-control" id="gmail">
-        </div>       
+        </div>    
+        <div class="row justify-content-center text-center mt-2">
+          <div class="col-12">
+            <div class="alert alert-danger gnv d-none" role="alert">
+              Correo de Gmail no valido.
+            </div>
+            <div class="alert alert-danger gnv2 d-none" role="alert">
+              Ese correo ya se encuentra en uso.
+            </div>
+            <div class="alert alert-danger dp d-none" role="alert">
+              Favor de poner datos permitidos y no dejar campos vacios.
+            </div>
+            <div class="alert alert-danger fn d-none" role="alert">
+              Favor de poner una fecha de nacimiento valida, con edad mayor a 15.
+            </div>
+            <div class="alert alert-danger nt d-none" role="alert">
+              Favor de poner un numero telefonico a 10 digitos o un numero valido.
+            </div>
+            <div class="alert alert-success da2 d-none" role="alert">
+              Datos Actualizados.
+            </div>
+          </div>
+        </div>           
         <div class="col-12 text-center mt-3 mb-1">
             <button type="button" class="btn btn-primary" onclick="volver()">Volver</button>
             <button type="button" class="btn btn-primary" onclick="udu()">Guardar Cambios</button>

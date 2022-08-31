@@ -3,7 +3,6 @@
 </head>
 <body onload="user(), datos()">
   <div class="derecha">
-
     <div class="col-8 text-center responsive mt-3 mb-1">
       <input type="text" class="form-control" placeholder="Nombre del archivo" id="npdf">
     </div>

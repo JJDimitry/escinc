@@ -47,6 +47,20 @@ function datos(){
     });    
 }
 
+function quitar(){
+    $('.cai').addClass('d-none')
+    $('.cnc').addClass('d-none')
+    $('.nuv').addClass('d-none')
+    $('.nur').addClass('d-none')
+    $('.da').addClass('d-none')
+    $('.gnv').addClass('d-none')
+    $('.gnv2').addClass('d-none')
+    $('.dp').addClass('d-none')
+    $('.fn').addClass('d-none')
+    $('.nt').addClass('d-none')
+    $('.da2').addClass('d-none')
+}
+
 function udl(){
     var idusuario = $('#idusuario').val();
     var pswd0 = $('#x').val();
@@ -57,13 +71,16 @@ function udl(){
     var img = $('#base64').text();
     var i = 0;
     if(pswd0 != pswd3){
-        alert("Contraseña anterior incorrecta.")
+        $('.cai').removeClass('d-none')
+        setTimeout(quitar, 4000)    
     }            
     else if(pswd1 != pswd2){
-        alert("Las contraseñas nuevas no coinciden.")
+        $('.cnc').removeClass('d-none')
+        setTimeout(quitar, 4000)    
     }
     else if(user == ""){
-        alert("El nombre de usuario no puede quedar vacio")
+        $('.nuv').removeClass('d-none')
+        setTimeout(quitar, 4000)    
     }
     else if(img != ""){    
     i=1;
@@ -86,13 +103,17 @@ function udl(){
             method: 'POST',
             url: '../libs/db/adl.php',
             data: parametros,
-            success: function(resp) {
-                alert(resp);
+            success: function(resp) {                
                 if(resp == "Datos actualizados."){
                 $('#cont3').val(null);  
                 $('#cont2').val(null);  
                 $('#cont1').val(null);  
-
+                $('.da').removeClass('d-none')
+                    setTimeout(quitar, 4000)  
+                }
+                else{
+                    $('.nur').removeClass('d-none')
+                    setTimeout(quitar, 4000)  
                 }
             }
         });
@@ -118,14 +139,22 @@ function udu(){
             dia = "0" + dia;
         fnac = dia + '/' + mes + '/' + anio;
     var correo = verificar(gmail);    
-    if(correo == 0)
-        alert("Correo de Gmail no valido.");
-    else if( nombre.trim().length <= 0 || apellidos.trim().length <= 0 || dir.trim().length <= 0 || tel.trim().length <= 0 || gmail.trim().length <= 0) 
-        alert("Favor de poner datos permitidos y no dejar campos vacios: " +  tel.trim().length);
-    else if(fnac.trim().length != 10 || dato - anio <= 15 || dato - anio >= 75)
-        alert("favor de poner una fecha de nacimiento valida. año:" + anio);
-    else if(tel.length != 10)
-        alert("Favor de poner un numero telefonico a 10 digitos o un numero valido.");
+    if(correo == 0){
+        $('.gnv').removeClass('d-none')
+        setTimeout(quitar, 4000)    
+    }        
+    else if( nombre.trim().length <= 0 || apellidos.trim().length <= 0 || dir.trim().length <= 0 || tel.trim().length <= 0 || gmail.trim().length <= 0) {        
+        $('.dp').removeClass('d-none')
+        setTimeout(quitar, 4000)    
+    }        
+    else if(fnac.trim().length != 10 || dato - anio <= 15 || dato - anio >= 75){
+        $('.fn').removeClass('d-none')
+        setTimeout(quitar, 4000)    
+    }        
+    else if(tel.length != 10){
+        $('.nt').removeClass('d-none')
+        setTimeout(quitar, 4000)    
+    }        
     else{
         var parametros = {
             "idusuario": idusuario,
@@ -141,7 +170,14 @@ function udu(){
             url: '../libs/db/adu.php',
             data: parametros,
             success: function(resp) {
-                alert(resp);
+                if(resp == "Datos actualizados."){
+                    $('.da2').removeClass('d-none')
+                    setTimeout(quitar, 4000)  
+                }
+                else{
+                    $('.gnv2').removeClass('d-none')
+                    setTimeout(quitar, 4000)  
+                }
             }
         });
     }

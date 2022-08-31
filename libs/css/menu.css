@@ -27,3 +27,8 @@ a {
 #sidebar-container .menu {
 	width: 15rem;
 }
+
+.stat{
+	position: fixed;
+	background-color: #3786fc;
+}

@@ -20,9 +20,6 @@ function user(){
     image.src = imagen;                          
     foto.setAttribute("src", imagen);
 }
-function adm(){
-    
-}
 
 function DestruirSesion()
 {
@@ -59,18 +56,18 @@ function sdidact(base64){
     dato = dato + '/' + mes + '/';    
     dato = dato + fecha.getFullYear();
     var npdf = $("#npdf").val();
-    var id = $("#ID").val();     
+    var idusuario = $("#idusuario").val();     
     if(base64.length > 1048576)
         alert("El pdf debe pesar 1 Mb o menos.");
     else if(npdf == "")
         alert("favor de escribir un nombre al archivo a subir.");
     else{
         var parametros = {
-            "id": id,
+            "idusuario": idusuario,
             "dato": dato,
             "npdf": npdf,
             "base64": base64
-            }; 
+            };
         $.ajax({
             method: 'POST',
             url: '../../libs/db/ssec.php',
